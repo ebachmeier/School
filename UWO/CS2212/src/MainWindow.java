@@ -3,7 +3,6 @@ import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.awt.EventQueue;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -22,16 +21,11 @@ import javax.swing.JRadioButton;
 import java.awt.Color;
 
 import javax.swing.GroupLayout;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-
 import java.awt.BorderLayout;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
+import javax.swing.SwingConstants;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class MainWindow extends JFrame {
 
@@ -64,30 +58,33 @@ public class MainWindow extends JFrame {
 		getContentPane().setLayout(new BorderLayout());
 		getContentPane().add(this.createForm(), BorderLayout.CENTER);
 
-		/*
-		 * JPanel pnlWest = new JPanel(); pnlWest.setBackground(Color.BLUE);
-		 * pnlWest.setPreferredSize(new Dimension(10, 800));
-		 * 
-		 * JPanel pnlEast = new JPanel(); pnlEast.setBackground(Color.BLUE);
-		 * pnlEast.setPreferredSize(new Dimension(10, 800));
-		 * 
-		 * JPanel pnlNorth = new JPanel(); pnlNorth.setBackground(Color.BLUE);
-		 * pnlNorth.setPreferredSize(new Dimension(480, 30));
-		 * 
-		 * JPanel pnlSouth = new JPanel(); pnlSouth.setBackground(Color.BLUE);
-		 * pnlSouth.setPreferredSize(new Dimension(480, 10));
-		 * 
-		 * this.add(pnlEast, BorderLayout.EAST); this.add(pnlWest,
-		 * BorderLayout.WEST); this.add(pnlNorth, BorderLayout.NORTH);
-		 * this.add(pnlSouth, BorderLayout.SOUTH);
-		 */
+		JPanel pnlWest = new JPanel();
+		pnlWest.setBackground(Color.BLUE);
+		pnlWest.setPreferredSize(new Dimension(10, 800));
+
+		JPanel pnlEast = new JPanel();
+		pnlEast.setBackground(Color.BLUE);
+		pnlEast.setPreferredSize(new Dimension(10, 800));
+
+		JPanel pnlNorth = new JPanel();
+		pnlNorth.setBackground(Color.RED);
+		pnlNorth.setPreferredSize(new Dimension(480, 50));
+			
+		JPanel pnlSouth = new JPanel();
+		pnlSouth.setBackground(Color.BLUE);
+		pnlSouth.setPreferredSize(new Dimension(480, 50));
+
+		// this.add(pnlEast, BorderLayout.EAST);
+		// this.add(pnlWest, BorderLayout.WEST);
+		this.add(pnlNorth, BorderLayout.NORTH);
+		// this.add(pnlSouth, BorderLayout.SOUTH);
 	}
 
 	private JPanel createForm() {
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.ORANGE);
-
+		
 		JLabel locationLabel = new JLabel("Location: ");
 		location = new JTextField();
 		location.setPreferredSize(new Dimension(75, 25));
@@ -106,22 +103,21 @@ public class MainWindow extends JFrame {
 		temp = new JLabel();
 		updated = new JLabel();
 		JButton view = new JButton("View Weather!");
+		view.setHorizontalAlignment(SwingConstants.RIGHT);
 		view.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				// message displayed when button view weather pressed
 				String temperature = null;
 				String lastUpdate = null;
 				c = location.getText();
-				// remove possible white space in user entry
-				c.replaceAll("\\s", "");
 				current = new WeatherInfo(c);
 				if (celcius.isSelected()) {
 					temperature = "The temperature in " + current.getLocation()
-							+ " is " + current.getTemperatureC();
+							+ " is " + current.getTemperature("C");
 					lastUpdate = "Last updated " + current.getUpdateTime();
 				} else if (fahrenheit.isSelected()) {
 					temperature = "The temperature in " + current.getLocation()
-							+ " is " + current.getTemperatureF();
+							+ " is " + current.getTemperature("F");
 					lastUpdate = "Last updated " + current.getUpdateTime();
 				} else {
 					temperature = "Choose an option first!";
@@ -136,52 +132,70 @@ public class MainWindow extends JFrame {
 		 * Layout of the app from panel
 		 */
 		GroupLayout layout = new GroupLayout(panel);
+		layout.setHorizontalGroup(layout
+				.createParallelGroup(Alignment.LEADING)
+				.addGroup(
+						layout.createSequentialGroup()
+								.addGroup(
+										layout.createParallelGroup(
+												Alignment.LEADING)
+												.addGroup(
+														layout.createSequentialGroup()
+																.addGroup(
+																		layout.createParallelGroup(
+																				Alignment.LEADING)
+																				.addComponent(
+																						locationLabel)
+																				.addComponent(
+																						optLabel))
+																.addGroup(
+																		layout.createParallelGroup(
+																				Alignment.LEADING,
+																				false)
+																				.addComponent(
+																						location,
+																						269,
+																						269,
+																						269)
+																				.addGroup(
+																						layout.createSequentialGroup()
+																								.addComponent(
+																										celcius)
+																								.addComponent(
+																										fahrenheit)
+																								.addPreferredGap(
+																										ComponentPlacement.RELATED,
+																										GroupLayout.DEFAULT_SIZE,
+																										Short.MAX_VALUE)
+																								.addComponent(
+																										view))))
+												.addComponent(temp)
+												.addComponent(updated))
+								.addGap(131)));
+		layout.setVerticalGroup(layout
+				.createParallelGroup(Alignment.LEADING)
+				.addGroup(
+						layout.createSequentialGroup()
+								.addGroup(
+										layout.createParallelGroup(
+												Alignment.BASELINE)
+												.addComponent(locationLabel)
+												.addComponent(
+														location,
+														GroupLayout.PREFERRED_SIZE,
+														GroupLayout.DEFAULT_SIZE,
+														GroupLayout.PREFERRED_SIZE))
+								.addGroup(
+										layout.createParallelGroup(
+												Alignment.BASELINE)
+												.addComponent(optLabel)
+												.addComponent(celcius)
+												.addComponent(fahrenheit)
+												.addComponent(view))
+								.addComponent(temp).addComponent(updated)
+								.addGap(29)));
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateContainerGaps(true);
-		layout.setHorizontalGroup(layout
-				.createSequentialGroup()
-				.addGroup(
-						layout.createParallelGroup(
-								GroupLayout.Alignment.LEADING)
-								.addGroup(
-										layout.createSequentialGroup()
-												.addGroup(
-														layout.createParallelGroup(
-																GroupLayout.Alignment.LEADING)
-																.addComponent(
-																		locationLabel)
-																.addComponent(
-																		optLabel))
-												.addGroup(
-														layout.createParallelGroup(
-																GroupLayout.Alignment.LEADING)
-																.addComponent(
-																		location)
-																.addGroup(
-																		layout.createSequentialGroup()
-																				.addComponent(
-																						celcius)
-																				.addComponent(
-																						fahrenheit))))
-								.addComponent(temp).addComponent(updated))
-				.addComponent(view));
-		layout.setVerticalGroup(layout
-				.createSequentialGroup()
-				.addGroup(
-						layout.createParallelGroup(
-								GroupLayout.Alignment.BASELINE)
-								.addComponent(locationLabel)
-								.addComponent(location))
-				.addGroup(
-						layout.createParallelGroup(
-								GroupLayout.Alignment.BASELINE)
-								.addComponent(optLabel).addComponent(celcius)
-								.addComponent(fahrenheit))
-				.addGroup(
-						layout.createParallelGroup(
-								GroupLayout.Alignment.BASELINE).addComponent(
-								temp)).addComponent(updated).addComponent(view));
-
 		panel.setLayout(layout);
 		return panel;
 
