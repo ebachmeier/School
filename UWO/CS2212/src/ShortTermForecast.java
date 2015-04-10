@@ -34,8 +34,6 @@ public class ShortTermForecast {
 	public ShortTermForecast(String location) {
 
 		try {
-			// remove any possible whitespace in the location passed
-			location.replaceAll("\\s", "");
 			// create Http call for the city passes, short term data
 			client = new HttpClient(location, "s");
 			// create JSONObject for this data
@@ -80,7 +78,7 @@ public class ShortTermForecast {
 				hourly[x + 1] = temp;
 			}
 		} catch (JSONException ex) {
-			ex.printStackTrace();
+			System.out.println("Error retrieving shortterm forecast data for the selected location.");
 		}
 	}
 

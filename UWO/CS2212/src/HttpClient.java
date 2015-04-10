@@ -7,7 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * Class for retrieveing weather info from openweathermap by requesting the JSON
+ * Class for retrieving weather info from openweathermap by requesting the JSON
  * formatted information.
  * 
  * @author Eric Bachmeier
@@ -45,13 +45,16 @@ public class HttpClient {
 		HttpURLConnection connect = null;
 		InputStream in = null;
 
+		// remove any possible whitespace in the location passed
+		location.replaceAll(" ", "");
+
 		// set u to proper link base for appropriate weather call
 		if (t == "c")
 			u = baseCall + location;
 		else if (t == "s")
 			u = baseForecast + location;
 		else
-			u = longForecast + location + "&cnt=5";
+			u = longForecast + location + "&cnt=6";
 
 		try {
 			// connect to the url
@@ -77,9 +80,9 @@ public class HttpClient {
 			// set data to the buffered string for later use
 			this.data = buffer.toString();
 		} catch (MalformedURLException ex) {
-			ex.printStackTrace();
+			System.out.println("Error connecting to the internet, please connect and try again.");
 		} catch (IOException ex) {
-			ex.printStackTrace();
+			System.out.println("Error connecting to server, please try again.");
 		} finally {
 			try {
 				in.close();

@@ -22,7 +22,7 @@ public class LongTermForecast {
 	private WeatherInfo temp;
 	
 	// constant for number of days in the long term forecast
-	private final static int DAYS = 5;
+	private final static int DAYS = 6;
 
 	/**
 	 * Constructor for a LongTermForecast object containing all categories of
@@ -34,8 +34,6 @@ public class LongTermForecast {
 	public LongTermForecast(String location) {
 
 		try {
-			// remove any possible whitespace in the location passed
-			location.replaceAll("\\s", "");
 			// create Http call for the city passes, long term data
 			client = new HttpClient(location, "l");
 			// create JSONObject for this data
@@ -80,7 +78,7 @@ public class LongTermForecast {
 				daily[x + 1] = temp;
 			}
 		} catch (JSONException ex) {
-			ex.printStackTrace();
+			System.out.println("Error retrieving longterm forecast data for the selected location.");
 		}
 	}
 

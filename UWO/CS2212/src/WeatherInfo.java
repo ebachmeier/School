@@ -30,7 +30,7 @@ public class WeatherInfo {
 	 */
 	private double longitude, latitude, temp, pressure, humidity, min, max,
 			speedWind, degreesWind;
-	private int weatherId, clouds, cod, locId;
+	private int weatherId, clouds, locId;
 	private String country, main, description, iconCode, base, city;
 	private JSONObject j, jCoord, jSys, jWeatherObj, jMain, jWind, jClouds;
 	private JSONArray jWeather;
@@ -70,8 +70,6 @@ public class WeatherInfo {
 	public WeatherInfo(String location) {
 
 		try {
-			// remove any possible whitespace in the location passed
-			location.replaceAll("\\s", "");
 			// create Http call for the city passes, current data
 			client = new HttpClient(location, "c");
 			// create JSONObject for this data
@@ -132,11 +130,8 @@ public class WeatherInfo {
 			// "name" tag
 			this.city = j.getString("name");
 
-			// "cod" tag
-			this.cod = j.getInt("cod");
-
 		} catch (JSONException ex) {
-			ex.printStackTrace();
+			System.out.println("Error retrieving the weather data for the selected location.");
 		}
 	}
 
@@ -152,35 +147,11 @@ public class WeatherInfo {
 					+ ".png"));
 			return image;
 		} catch (IOException ex) {
-			ex.printStackTrace();
+			System.out.println("Error retrieving the image for the sky condition.");
 		}
 		return null;
 	}
-
-	/**
-	 * toString method to print the weather information neatly and organized
-	 * 
-	 * @return formatted String
-	 */
-	public String toString() {
-		return "----- Coordinates\n      longitude: " + longitude
-				+ "\n      latitude: " + latitude + "\n\n"
-				+ "----- System\n      country: " + country
-				+ "\n      sunrise: " + sunrise + "\n      sunset: " + sunset
-				+ "\n\n" + "----- Weather\n      weather id: " + weatherId
-				+ "\n      main: " + main + "\n      description: "
-				+ description + "\n\n" + "----- Base\n      " + base + "\n\n"
-				+ "----- Main Weather Info\n      temperature: " + temp
-				+ "\n      humidity: " + humidity + "\n      pressure: "
-				+ pressure + "\n      min: " + min + "\n      max: " + max
-				+ "\n\n" + "----- Wind\n      speed: " + speedWind
-				+ "\n      degrees: " + degreesWind + "\n\n"
-				+ "----- Clouds\n      all: " + clouds + "\n\n"
-				+ "----- Dt\n      " + dt + "\n\n" + "----- Id\n      " + locId
-				+ "\n\n" + "----- Name/City\n      " + city + "\n\n"
-				+ "----- Cod\n      " + cod + "\n\n";
-	}
-
+	
 	/**
 	 * Getter method for retrieving the coordinates of the city searched
 	 * 
@@ -208,7 +179,7 @@ public class WeatherInfo {
 	public String getSunrise() {
 		cal = new GregorianCalendar();
 		rise = new Date(sunrise * 1000L);
-		r = new SimpleDateFormat("hh:mm a");
+		r = new SimpleDateFormat("h:mm a");
 		r.setTimeZone(cal.getTimeZone());
 		return r.format(rise);
 	}
@@ -221,7 +192,7 @@ public class WeatherInfo {
 	public String getSunset() {
 		cal = new GregorianCalendar();
 		set = new Date(sunset * 1000L);
-		s = new SimpleDateFormat("hh:mm a");
+		s = new SimpleDateFormat("h:mm a");
 		s.setTimeZone(cal.getTimeZone());
 		return s.format(set);
 	}
@@ -343,7 +314,7 @@ public class WeatherInfo {
 	 * @return double of the air pressure in psi
 	 */
 	private static double convertPressure(double p) {
-		return Math.round(((p * 0.014503773773) * 1.00) / 1.00);
+		return (double) Math.round((p * 0.0145) * 100) / 100d;
 	}
 
 	/**
@@ -367,7 +338,7 @@ public class WeatherInfo {
 	 * @return double of the wind speed in m/s
 	 */
 	private static double convertSpeed(double s) {
-		return Math.round(((s * 2.23694) * 1.00) / 1.00);
+		return (double) Math.round((s * 2.2369) * 100) / 100d;
 	}
 
 	/**
@@ -404,6 +375,17 @@ public class WeatherInfo {
 	}
 
 	/**
+	 * Getter method for retrieving the current time locally
+	 * 
+	 * @return String of the current time in format HH:MM AM/PM
+	 */
+	public String getCurrentTime() {
+		cal = new GregorianCalendar();
+		u = new SimpleDateFormat("h:mm a");
+		return u.format(cal.getTime());
+	}
+
+	/**
 	 * Getter method for retrieving the time the weather info was last updated
 	 * 
 	 * @return String of the last update time in the format DD/MM/YYYY HH:MM
@@ -412,7 +394,7 @@ public class WeatherInfo {
 	public String getUpdateTime() {
 		cal = new GregorianCalendar();
 		up = new Date(dt * 1000L);
-		u = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+		u = new SimpleDateFormat("M/d/yyyy h:mm a");
 		u.setTimeZone(cal.getTimeZone());
 		return u.format(up);
 	}
@@ -425,7 +407,7 @@ public class WeatherInfo {
 	public String getDate() {
 		cal = new GregorianCalendar();
 		up = new Date(dt * 1000L);
-		u = new SimpleDateFormat("MM/dd/yyyy");
+		u = new SimpleDateFormat("M/d/yyyy");
 		u.setTimeZone(cal.getTimeZone());
 		return u.format(up);
 	}
