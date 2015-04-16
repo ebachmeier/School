@@ -1,0 +1,8 @@
+#!/bin/sh
+while read a b 
+do
+  echo $a $a $b $b $c $c
+  echo $a $a $b $b $c $c
+done | tr a-z A-Z
+Trace and explain the output of the following command:
+script.sh < data_file

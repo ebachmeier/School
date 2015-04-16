@@ -1,0 +1,46 @@
+<html>
+<style type="text/css">
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+</style>
+  <title>Toronto Maple Leafs Awards Vote</title>
+<body>
+    
+      <h2><strong>Toronto Maple Leafs</strong></h2>
+      <p>Thank you {{ firstName }}, for voting for your favourite player!</p>
+      <p><strong>Player Awards Survey: </strong></p>
+  <table cellpadding="10" cellspacing="0">
+        <tr>
+          <td width="138" valign="top">Name:</td>
+          <td width="480" valign="top">{{ firstName }} {{ lastName }}</td>
+        </tr>
+        <tr>
+          <td valign="top">Email:</td>
+          <td valign="top">{{ email }}</td>
+        </tr>
+        <tr>
+          <td valign="top">Country</td>
+          <td valign="top">{{ country }}</td>
+        </tr>
+        <tr>
+          <td valign="top">Player:</td>
+          <td valign="top">{{ player }} </td>
+        </tr>
+        <tr>
+          <td valign="top">Importance:</td>
+          <td valign="top">{{ position }}</td>
+        </tr>
+        <tr>
+          <td valign="top">Trophies:</td>
+          <td valign="top">{{ trophy }}</td>
+        </tr>
+        <tr>
+          <td valign="top">Additional Info:</td>
+          <td valign="top">{{ comments }}</td>
+        </tr>
+      </table>
+  </body>
+</html>
