@@ -1,0 +1,25 @@
+65
+Fred Flintstone
+45
+Barney Rubble
+25
+Jimmy the Greek
+35
+Wanda Swan
+55
+Wendy Bilideau
+42
+Karen Smith
+30
+Joe Barnes
+57
+Brenda Harrigan
+62
+Johnny Horton
+51
+Helen Birr
+23
+Jack Foote
+48
+John Senator
+41
