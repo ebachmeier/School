@@ -1,0 +1,109 @@
+1
+10/11/2015 22:09:08 --- Processing integer input
+
+10/11/2015 22:09:10 --- User entered valid number --> 4 <--
+
+10/11/2015 22:09:10 --- Maintenance selected to logout
+
+10/11/2015 22:09:10 --- Processing integer input
+
+10/11/2015 22:09:20 --- User entered valid number --> 11114 <--
+
+10/11/2015 22:09:20 --- Logged in as 11114
+
+10/11/2015 22:09:20 --- Processing integer input
+
+10/11/2015 22:09:23 --- User entered valid number --> 6 <--
+
+10/11/2015 22:09:23 --- 11114 selected transfer
+
+10/11/2015 22:09:23 --- Processing integer input
+
+10/11/2015 22:09:24 --- User entered valid number --> 1 <--
+
+10/11/2015 22:09:24 --- 11114 selected to transfer funds from their chequing account
+
+10/11/2015 22:09:24 --- Processing input as double
+
+10/11/2015 22:09:25 --- User entered valid double --> 55.000000 <--
+
+10/11/2015 22:09:25 --- 11114 entered a valid transfer amount
+
+10/11/2015 22:09:25 --- There will not be a bank fee for client number 11114
+
+10/11/2015 22:09:25 --- 11114 successfully transferred $55.000000 without a fee
+
+10/11/2015 22:09:25 --- Processing integer input
+
+10/11/2015 22:09:32 --- User entered valid number --> 10 <--
+
+10/11/2015 22:09:32 --- 11114 selected to logout
+
+10/11/2015 22:09:32 --- Processing integer input
+
+10/11/2015 22:09:39 --- User entered valid number --> 0 <--
+
+10/11/2015 22:09:39 --- Processing integer input
+
+10/11/2015 22:09:41 --- User entered valid number --> 2 <--
+
+10/11/2015 22:09:41 --- Maintenance selected to print the execution trace to screen
+
+10/11/2015 22:09:41 --- Maintenance is viewing the full execution trace
+
+10/11/2015 22:09:41 --- Processing integer input
+
+10/11/2015 22:10:20 --- User entered valid number --> 4 <--
+
+10/11/2015 22:10:20 --- Maintenance selected to logout
+
+10/11/2015 22:10:20 --- Processing integer input
+
+10/11/2015 22:10:21 --- User entered valid number --> 9 <--
+
+10/11/2015 22:10:21 --- User safely quit program session
+
+10/11/2015 22:10:24 --- 18 days left in month to pay
+
+10/11/2015 22:10:24 --- Processing integer input
+
+10/11/2015 22:11:09 --- User entered valid number --> 11114 <--
+
+10/11/2015 22:11:09 --- Logged in as 11114
+
+10/11/2015 22:11:09 --- Processing integer input
+
+10/11/2015 22:11:11 --- User entered valid number --> 4 <--
+
+10/11/2015 22:11:11 --- 11114 selected withdrawal
+
+10/11/2015 22:11:11 --- Processing integer input
+
+10/11/2015 22:11:13 --- User entered valid number --> 1 <--
+
+10/11/2015 22:11:13 --- 11114 selected to withdraw from their chequing account
+
+10/11/2015 22:11:13 --- Processing input as double
+
+10/11/2015 22:11:15 --- User entered valid double --> 3000 <--
+
+10/11/2015 22:11:15 --- 11114 had insufficient funds for a withdrawel from chequing
+
+10/11/2015 22:11:15 --- Processing input as double
+
+10/11/2015 22:11:50 --- User entered valid double --> 0 <--
+
+10/11/2015 22:11:50 --- 11114 selected to cancel the withdraw operation
+
+10/11/2015 22:11:50 --- Processing integer input
+
+10/11/2015 22:11:52 --- User entered valid number --> 10 <--
+
+10/11/2015 22:11:52 --- 11114 selected to logout
+
+10/11/2015 22:11:52 --- Processing integer input
+
+10/11/2015 22:11:53 --- User entered valid number --> 9 <--
+
+10/11/2015 22:11:53 --- User safely quit program session
+

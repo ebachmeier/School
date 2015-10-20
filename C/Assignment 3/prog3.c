@@ -1,5 +1,4 @@
 // Eric Bachmeier
-// 250738776
 //
 // Assignment 3
 //
