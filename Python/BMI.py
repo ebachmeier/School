@@ -1,29 +1,69 @@
 # Eric Bachmeier
-# This program allows users to input their height and weight and it tells them their BMI and an appropriate response.
-# Date Completed: September 21, 2011
+#      The purpose of this program is to promt the user for their height and
+# weight, then calculate their BMI number and tell them what it means.
+# Feb. 7, 2013
 
-import math
-print "BMI Calculator"
-
+print "BMI"
+print # Print opening sequence information
+print "Body mass index is a measure of the weight of a person scaled according"
+print "to their height."
+print "BMI is defined as the individual's body weight divided by the square of"
+print "the height."
+print "It is almost always expressed in the unit kg / m"+u"\u00B2"+"."
 print
-w = float (raw_input ("Enter your Weight in Kg: "))
-h = float (raw_input ("Enter your height in m: "))
-
-BMI = w / (h * h)
-print
-print "Your BMI is ", BMI, " Kg/m squared."
-print
-
-if BMI < 15:
-    print "You are Starvation."
-elif BMI < 18.5:
-    print "You are Underweight."
-elif BMI <= 25:
-    print "You are Ideal."
-elif BMI <= 30:
-    print "You are Overweight."
-elif BMI <= 40:
-    print "You are Obese."
-else:
-    print "You are Morbidly Obese."
-    
+# Validation code
+def isnumber(num,valid):
+    try:
+        num = float(num)
+    except:
+        print"Invalid input."
+        valid = False
+    else:
+        if num <= 0:
+            print"Invalid input."
+        else:
+            valid = True
+    return num,valid
+# Promt user for weight and height
+run = True
+while run:
+    valid = False
+    print
+    while not(valid):
+        w = raw_input("Please enter your weight(kg): ")
+        w,valid = isnumber(w,valid)
+    valid = False
+    while not(valid):
+        h = raw_input("Please enter your height(m): ")
+        h,valid = isnumber(h,valid)
+    # Calculate BMI
+    bmi = w/(h*h)
+    print # Print answer
+    print"Your BMI is",round(bmi,2)
+    print
+    # Make closing statement intervals
+    if bmi < 15: # Print accompanying statement
+        print"You are in the starvation category,"
+        print"more calories and protein would be a good idea."
+    elif bmi < 18.5:
+        print"You are in the underweight category,"
+        print"eating more often would be a good idea."
+    elif bmi <= 25:
+        print"You are in the ideal category,"
+        print"keep up the good diet, and keep exercising."
+    elif bmi <= 30:
+        print"You are in the overweight category,"
+        print"changing your diet and starting to exercise would be a good idea."
+    elif bmi <= 40:
+        print"You are in the obese category,"
+        print"changing your diet and starting to exercise would be a good idea."
+    else:
+        print"You are in the morbidly obese category,"
+        print"dramatic changes to your diet and lots of exercise are crucial, see a doctor."
+    print
+    # Repeat loop option
+    response = raw_input("Would you like to calculate another BMI?(y/n): ")
+    if response.upper() == "N" or response.upper() == "NO":
+        run = False
+        print
+        print"Thankyou for using BMI program!"

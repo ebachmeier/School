@@ -1,30 +1,28 @@
 # Eric Bachmeier
-# Date Completed: Date Completed: October 26, 2011
+#      The purpose of this program is to display information about a text file 
+# Apr. 9, 2013
 
-print "Values"
-print "------"
+print "Information about 'Values.txt'"
+print "------------------------------"
+print # Print title
+inFile = open('Values.txt', 'r') # Open file
+number = inFile.readline().rstrip('\n') # Read first number
+high = int(number) # Set high to first number
+low = int(number) # Set low to first number
+add = 0 # Set sum counter to zero
+count = 0 # Set number counter to zero
+while number != "": # While there is information in line execute
+    if int(number) > high:
+        high = int(number) # If number is higher, set it equal to high
+    if int(number) < low:
+        low = int(number)# If number is lower set it equal to low
+    count += 1 # Count next number as 1
+    add += int(number) # Add to sum count
+    number = inFile.readline().rstrip('\n') # Read next number
+average = float(add)/float(count) # Calculate average
 print
-print "Print out the number of values in the file, the average of the values"
-print "in the file, the highest value in the file, and the lowest value in the"
-print "file."
-print
-filename = "Values.txt"
-inFile = open(filename, "r")
-total = 0
-num_value = 0
-high = -999999
-low = 999999
-num = inFile.readline().rstrip("\n")
-while num != "":
-    num_value = num_value + 1
-    total = total + int(num)
-    if int(num) > high:
-        high = int(num)
-    if int(num) < low:
-        low = int(num)
-    num = inFile.readline().rstrip("\n")
-print "There are",num_value,"numbers in the file."
-print "The average of the numbers is:",total/num_value
-print "The highest number is:",high
-print "The lowest number is:",low
-inFile.close()
+print "Number of values:", count # Print count of numbers
+print "Average of values:", round(average,2) # Print total average
+print "Highest value:", high # Print highest value
+print "Lowest value:", low # Print lowest value
+inFile.close() # Close file

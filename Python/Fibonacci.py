@@ -1,28 +1,35 @@
 # Eric Bachmeier
-# This program tell you the certain digit in the sequence that you enter.
-# Date Compleetd Januray 10, 2012
+# Fibonacci.py - This program finds the Fibonacci number at the position
+# specified by the user.
+# May 21, 2013
 
-print "Fibonacci Series"
-print "----------------"
+def fib(n): # Define fibonacci function
+    if n == 0 or n == 1: # Fibonacci number for 0 and 1st term is 1
+        return 1
+    else:
+        return fib(n-1) + fib(n-2) # Add the previous two fibonacci numbers
+
+print "Fibonacci Numbers"
+print "-----------------"
+print # Print introduction
+print "Fibonacci numbers are listed as follows:"
+print "\t"+"1, 1, 2, 3, 5, 8, 13, 21, 34 ..."
+print "\t"+"where: F(0) = 1"
+print "\t"+"       F(1) = 1"
+print "\t"+"       F(n) = F(n-1) + F(n-2) for all n>=2"
 print
-print "The Fibonacci series is a sequence of numbers in which each number in "
-print "the sequence equals the sum to the two preceding numbers. The first two"
-print "numbers in the sequence are 1. The sequence of numbers are 1,1,2,3,5,8,"
-print "13,21,..."
-print
+print "This program uses recursion to find the nth Fibonacci number"
 repeat = True
-while repeat == True:
-    term = int(raw_input("Which term would you like to see? (1-50) "))
-    while term < 1 or term > 50:
-        print "You have entered an invalid number."
-        term = int(raw_input("Which term would you like to see? (1-50)"))
-    fib = [0,1,1]
-    for x in range(3,term+1):
-        fib.append(fib[x-1] + fib[x-2])
-    print "The term",term,"in the Fibonacci series is",fib[term],"."
+while repeat:
     print
-    response = raw_input("Would you like to see another term? (Y/N) : ")
-    if response == "N" or response == "n":
-        repeat = False
-print
-print "Good bye!"
+    try: # Promt user for the value of n
+        n = int(raw_input("Enter a value for n (negative number to quit the program): "))
+    except BaseException: # Validate for integer
+        print "Invalid input."
+        continue
+    if n < 0:
+        repeat = False # Quit program if negative integer
+    else:
+        fibnum = fib(n) # Call fibonacci function to fibnum
+        print "F("+str(n)+") = "+str(fibnum) # Print fibonacci number for nth term
+        
