@@ -2,7 +2,7 @@
 
 A ray tracer programmed in C to render 3D image a scene.  The program utilizes the X11 Window system. Parameters for the window size, number of objects, and levels of recursion are defined at the top of raytracer.c file. 
 
-![Ray Tracer](https://raw.githubusercontent.com/ericbachmeier5/RayTracer/master/raytracer.png)
+![Ray Tracer](https://raw.githubusercontent.com/ericbachmeier5/School/master/C/RayTracer/raytracer.png)
 
 ## To Install:
 
