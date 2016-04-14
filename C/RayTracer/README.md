@@ -9,7 +9,12 @@ A ray tracer programmed in C to render 3D image a scene.  The program utilizes t
 In terminal, clone the repository as follows in your working directory by typing:
 
 ```
-$ git clone git@github.com:ericbachmeier5/RayTracer.git
+$ git init RayTracer
+$ cd RayTracer
+$ git remote add origin https://github.com/ericbachmeier5/School/tree/master/C/RayTracer
+$ git config core.sparsecheckout true
+$ echo "finisht/*" >> .git/info/sparse-checkout
+$ git pull --depth=1 origin master
 ```
 
 Install X11 Window system if you don't already have it.
