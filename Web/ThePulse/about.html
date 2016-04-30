@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Pulse | About Us</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+	<!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Sintony:700,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+	<!-- for mobile apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- js -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/modernizr.custom.97074.js"></script>
+	<!-- start-smooth-scrolling -->
+    <script src="js/responsiveslides.min.js"></script>
+        <script>
+		  $(function () {
+				// Slideshow 4
+				$("#slider4").responsiveSlides({
+				    auto: true,
+					pager: true,
+					nav: true,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+				$('.events').append("<li>before event fired.</li>");},
+				    after: function () {
+				$('.events').append("<li>after event fired.</li>");}
+				});
+				});
+        </script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+				<script src="js/jquery.chocolat.js"></script>
+			<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+			<!--light-box-files -->
+			<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$('.gallery a').Chocolat();
+			});
+			</script>
+    
+</head>
+<body>
+    
+<!-- header -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html">The Pulse</a>
+	</div>
+	<div class="header-right">
+		<span class="menu"><img src="images/menu.png" alt=""/></span>
+				<ul class="nav1">
+					<li><a href="index.html">HOME</a></li>
+					<li><a class="active" href="about.html">ABOUT</a></li>
+                    <li><a href="articles.html">ARTICLES</a></li>
+					<li><a href="contact.html">FEEDBACK</a></li>
+				</ul>
+				<!-- script for menu -->
+					<script> 
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						});
+						});
+					</script>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<!--start-about-->
+	<div class="about two">
+		<div class="container">
+		 <h3 class="tittle">About Us</h3>
+				<div class="about-top">
+					<div class="col-md-7 about-top-right">
+						<h4>Who We Are</h4>
+						<p>
+                        
+                            Our project seeks to educate and inform individuals of the issues in sport. For instance, mental health can directly and indirectly impact those in the sporting community and surrounding area. This topic has been of growing importance as new light is continuously shed on it, raising awareness and support. By creating a page that allows individuals to become involved in the conversation and learn more about the topic, we hope to lower the stigma that surrounds this important topic. By using sports, it allows individuals to relate and connect to an issue/topic. We want to shed some light on issues that are often overlooked in sport because these "superstar" athletes tend to come with a perception that they are immune to issues - however, they are human too – just like each and every one of us. Hockey creates a community in the rink and we hope to carry on this community outside the rink, providing people with the opportunity to connect, explore, and educate themselves on the issues in their community. This site will be the voice for issues that have no voice – In sports, we must talk.
+                        
+                        </p>
+					</div>
+					<div class="col-md-5 about-top-left">
+						<img src="images/logo.jpg" class="img-responsive" alt="The Pulse"/>
+                        
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>	 
+	</div>
+    
+<!--gallery-->
+<div class="gallery">
+		<div class="container">
+			<h3 class="tittle">The Team</h3>
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="images/eric.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/eric.jpg" alt="" />
+							<div>
+								<h5>Eric Bachmeier</h5>
+								<span>Software Developer / Computer Science Major</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/allyson.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/allyson.jpg" alt="" />
+							<div>
+								<h5>Allyson Forrest</h5>
+								<span>Kinesiology Major</span>
+							</div>
+						</a>
+					</li>
+                    <div class="clearfix"> </div>
+					<li>
+						<a href="images/michael.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/michael.jpg" alt="" />
+							<div>
+								<h5>Michael Singh</h5>
+								<span>English / Kinesiology Major</span>
+							</div>
+						</a>
+					</li>
+                    <li>
+						<a href="images/macallum.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/macallum.jpg" alt="" />
+							<div>
+								<h5>Macallum Tepsich</h5>
+								<span>Media, Information, and Technoculture Major</span>
+							</div>
+						</a>
+					</li>
+					<div class="clearfix"> </div>
+				</ul>
+			</section>
+				<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+				<script type="text/javascript">
+					$(function() {
+						$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+					});
+				</script>
+        </div>
+</div>
+
+<!-- quotes -->
+<div class="second-slider">
+	<div class="container">
+		<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider4">
+						<li>
+							<div class="sec-slid-info">
+								<img src="images/quotation.png" alt=""/>
+								<h3>Strength does not come from physical capacity. It comes from an indomitable will.</h3>
+								<img class="right" src="images/quotation2.png" alt=""/>
+								<p>Mahatma Gandhi (Political and Spiritual Leader)</p>
+							</div>
+						</li>
+						<li>
+							<div class="sec-slid-info">
+								<img src="images/quotation.png" alt=""/>
+								<h3>Tough times never last, but tough people do.</h3>
+								<img class="right" src="images/quotation2.png" alt=""/>
+								<p>Dr. Robert Schuller (Televangelist)</p>
+							</div>
+						</li>
+						<li>
+							<div class="sec-slid-info">
+								<img src="images/quotation.png" alt=""/>
+								<h3>Mental will is a muscle that needs exercise, just like muscles of the body.</h3>
+								<img class="right" src="images/quotation2.png" alt=""/>
+								<p>Lynn Jennings (Long Distance Runner)</p>
+							</div>
+						</li>
+					</ul>
+		</div>
+	</div>
+</div>	    
+
+<!-- footer info -->
+<div class="footer">
+	<div class="container">
+		<div class="footer-grids">
+			<div class="col-md-2 footer-grid logobtm">
+				<a href="index.html">The Pulse</a>
+			</div>
+			<div class="col-md-5 footer-grid">
+				<p>This is our final project component of DC3209b at Western University.</p>
+			</div>
+			<div class="col-md-3 footer-grid">
+				<p><b>Group Members:</b><br>
+                    Eric Bachmeier<br>
+                    Allyson Forrest<br>
+                    Michael Singh<br>
+                    Macallum Tepsich</p>
+			</div>
+			<div class="col-md-2 footer-grid">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+                    <li><a href="articles.html">ARTICLES</a></li>
+					<li><a href="contact.html">FEEDBACK</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="copy-right">
+			<p>&copy; 2016<a href="http://ericbachmeier.me" target="_blank">  Eric Bachmeier</a></p>
+		</div>
+	   </div>
+    </div>
+	<script type="text/javascript">
+		$(document).ready(function() {							
+		      $().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+</html>

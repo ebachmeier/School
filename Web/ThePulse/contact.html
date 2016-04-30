@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>The Pulse | Feedback</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+	<!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Sintony:700,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+	<!-- for mobile apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+    
+	<!-- start smooth scrolling -->
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+		  $(function () {
+				// Slideshow 4
+				$("#slider4").responsiveSlides({
+				    auto: true,
+					pager: true,
+					nav: true,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+				$('.events').append("<li>before event fired.</li>");},
+				    after: function () {
+				$('.events').append("<li>after event fired.</li>");}
+				});
+				});
+        </script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+    
+</head>
+<body>
+    
+<!-- header -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html">The Pulse</a>
+	</div>
+	<div class="header-right">
+		<span class="menu"><img src="images/menu.png" alt=""/></span>
+				<ul class="nav1">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+                    <li><a href="articles.html">ARTICLES</a></li>
+					<li><a class="active" href="contact.html">FEEDBACK</a></li>
+				</ul>
+				<!-- script for menu -->
+					<script> 
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						});
+						});
+					</script>
+	</div>
+	<div class="clearfix"></div>
+</div>
+    
+<!-- banner
+<div class="inner-banner"></div> -->
+
+<!--contact-->
+   <div class="contact">
+	 <div class="container">
+		<h3 class="tittle">Contact Us</h3>
+			<div class="contact-form">
+					<div class="col-md-6 contact-grid">
+					<form id="messageForm" method="POST">
+                        
+                        <input type="hidden" name="_subject" value="DC 3209 Feedback" />
+                        <input type="text" name="_gotcha" style="display:none" />
+				        <input type="hidden" name="_next" value="#"/> <!--"//ericbachmeier.me/thanks.html"-->
+                        
+						<p class="your-para">Name:</p>
+						<input type="text" value="" id="name" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+						<p class="your-para">UWO Email:</p>
+						<input type="text" value="" id="_replyto" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+						<p class="your-para">Message:</p>
+						<textarea cols="77" rows="6" value=" " id="message" onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"></textarea>
+						<div class="send">
+							<input type="submit" value="Send Message" >
+						</div>
+					</form>
+                    <script>
+   					    var messageForm = document.getElementById('messageForm');
+    				    messageForm.setAttribute('action', '//formspree.io/' + 'ebachme' + '@' + 'uwo' + '.' + 'ca');
+				    </script>
+				</div>
+				<div class="col-md-6 contact-in">
+					<p class="sed-para">Please provide feedback to help us improve our project!</p>
+					<p class="para1"></p>
+					<div class="more-address"> 
+						<div class="address-more">
+							<p>T: <a href="tel://2262353543">226-235-3543</a></p>
+							<p>E: <a href="mailto:ebachme@uwo.ca?subject=DC3209 Feedback">ebachme@uwo.ca</a></p>
+						</div>
+						<div class="clearfix"> </div>
+				      </div>
+				</div>
+				<div class="clearfix"> </div>
+			   </div>
+	</div>
+</div>
+
+<!-- footer info -->
+<div class="footer">
+	<div class="container">
+		<div class="footer-grids">
+			<div class="col-md-2 footer-grid logobtm">
+				<a href="index.html">The Pulse</a>
+			</div>
+			<div class="col-md-5 footer-grid">
+				<p>This is our final project component of DC3209b at Western University.</p>
+			</div>
+			<div class="col-md-3 footer-grid">
+				<p><b>Group Members:</b><br>
+                    Eric Bachmeier<br>
+                    Allyson Forrest<br>
+                    Michael Singh<br>
+                    Macallum Tepsich</p>
+			</div>
+			<div class="col-md-2 footer-grid">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+                    <li><a href="articles.html">ARTICLES</a></li>
+					<li><a href="#">FEEDBACK</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="copy-right">
+			<p>&copy; 2016<a href="http://ericbachmeier.me" target="_blank">  Eric Bachmeier</a></p>
+		</div>
+	   </div>
+    </div>
+	<script type="text/javascript">
+		$(document).ready(function() {							
+		      $().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!--
+    DC3209b Final Project Website by Eric Bachmeier
+
+    Some styles from http://w3layouts.com (http://creativecommons.org/licenses/by/3.0/)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Pulse | Home</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+	<!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Sintony:700,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+	<!-- for mobile apps -->
+		<meta name="description" content="This website aims to provide you with articles about issues in sports. From mental to physical illness, we've got you covered.">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+    
+	<!-- start smooth scrolling -->
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+		  $(function () {
+				// Slideshow 4
+				$("#slider4").responsiveSlides({
+				    auto: true,
+					pager: true,
+					nav: true,
+					speed: 400,
+					namespace: "callbacks",
+					before: function () {
+				$('.events').append("<li>before event fired.</li>");},
+				    after: function () {
+				$('.events').append("<li>after event fired.</li>");}
+				});
+				});
+        </script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},20000);
+				});
+			});
+		</script>
+    
+</head>
+<body>
+    
+<!-- header -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html">The Pulse</a>
+	</div>
+	<div class="header-right">
+		<span class="menu"><img src="images/menu.png" alt=""/></span>
+				<ul class="nav1">
+					<li><a class="active" href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+                    <li><a href="articles.html">ARTICLES</a></li>
+					<li><a href="contact.html">FEEDBACK</a></li>
+				</ul>
+				<!-- script for menu -->
+					<script> 
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						});
+						});
+					</script>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<div class="banner-info text-center">
+			<h1>The best motivation always comes from within.</h1>
+			
+            <!-- <h1><a href="index.html">In sports, we must talk.</a></h1> -->
+		</div>
+	</div>
+</div>
+    
+<div class="welcome">
+			<div class="container">
+			    <h2>Welcome to The Pulse!</h2>
+				<p>We aim to provide accurate information and exposure to mental illness, concussions, and body image regardless of last nights box scores.</p>
+			 </div>
+		</div>
+    
+<!-- slider-bottom -->
+<div class="slider-bottom">
+	<div class="container">
+        <div class="slider-grids">
+			<div class="col-md-6 slider-grid">
+                <div align="center">
+            
+                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/dc3209sports" data-widget-id="701440196961812481">Tweets by @dc3209sports</a> 
+                    
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            
+                </div>
+            </div>
+            
+            <div class="col-md-6 slider-grid">
+                <div align="center">
+                <a class="twitter-timeline" href="https://twitter.com/dc3209sports/likes" data-widget-id="712740510297886720">@dc3209sports's Likes on Twitter</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                
+            </div>
+            
+			<div class="clearfix"></div>
+        </div>  
+	</div>
+</div>
+    
+<!-- article -->
+<div class="article">
+	<div class="container">
+		<h3>LATEST ARTICLES</h3>
+	</div>
+</div>
+<!-- portfolio -->
+<div class="article-grids">
+    
+    <div class="col-md-3 article-grid">
+		<a href="the-john-scott-story.html"><img src="images/john-scott-main.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>Why We Love Sports Today</p>
+			<p>2nd April 2016<a href="the-john-scott-story.html" class="plus"><span class="glyphicon glyphicon-plus"></span></a></p>
+		</div>
+	</div>
+	<div class="col-md-3 article-grid">
+		<a href="the-jack-burke-story.html"><img src="images/jack-burke-main.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>The Jack Burke Story</p>
+			<p>15th March 2016<a href="the-jack-burke-story.html" class="plus"><span class="glyphicon glyphicon-plus"></span></a></p>
+		</div>
+	</div>
+	<div class="col-md-3 article-grid">
+		<a href="jackie-robinson.html"><img src="images/jackie-robinson-main.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>The Undeniable Impact of Jackie Robinson</p>
+			<p>31st March 2016<a href="jackie-robinson.html" class="plus"><span class="glyphicon glyphicon-plus"></span></a></p>
+		</div>
+	</div>
+	<div class="col-md-3 article-grid">
+		<a href="mental-health.html"><img src="images/health-main.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>Opening Our Eyes To Mental Health</p>
+			<p>26th March 2016<a href="mental-health.html" class="plus"><span class="glyphicon glyphicon-plus"></span></a></p>
+		</div>
+	</div>
+    
+	<div class="clearfix"></div>
+</div>
+
+<!-- quotes -->
+<div class="second-slider">
+	<div class="container">
+		<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider4">
+						<li>
+							<div class="sec-slid-info">
+								<img src="images/quotation.png" alt=""/>
+								<h3>Strength does not come from physical capacity. It comes from an indomitable will.</h3>
+								<img class="right" src="images/quotation2.png" alt=""/>
+								<p>Mahatma Gandhi (Political and Spiritual Leader)</p>
+							</div>
+						</li>
+						<li>
+							<div class="sec-slid-info">
+								<img src="images/quotation.png" alt=""/>
+								<h3>Tough times never last, but tough people do.</h3>
+								<img class="right" src="images/quotation2.png" alt=""/>
+								<p>Dr. Robert Schuller (Televangelist)</p>
+							</div>
+						</li>
+						<li>
+							<div class="sec-slid-info">
+								<img src="images/quotation.png" alt=""/>
+								<h3>Mental will is a muscle that needs exercise, just like muscles of the body.</h3>
+								<img class="right" src="images/quotation2.png" alt=""/>
+								<p>Lynn Jennings (Long Distance Runner)</p>
+							</div>
+						</li>
+					</ul>
+		</div>
+	</div>
+</div>	
+    
+<!-- footer info -->
+<div class="footer">
+	<div class="container">
+		<div class="footer-grids">
+			<div class="col-md-2 footer-grid logobtm">
+				<a href="index.html">The Pulse</a>
+			</div>
+			<div class="col-md-5 footer-grid">
+				<p>This is our final project component of DC3209b at Western University.</p>
+			</div>
+			<div class="col-md-3 footer-grid">
+				<p><b>Group Members:</b><br>
+                    Eric Bachmeier<br>
+                    Allyson Forrest<br>
+                    Michael Singh<br>
+                    Macallum Tepsich</p>
+			</div>
+			<div class="col-md-2 footer-grid">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+                    <li><a href="articles.html">ARTICLES</a></li>
+					<li><a href="contact.html">FEEDBACK</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="copy-right">
+			<p>&copy; 2016<a href="http://ericbachmeier.me" target="_blank">  Eric Bachmeier</a></p>
+		</div>
+	   </div>
+    </div>
+	<script type="text/javascript">
+		$(document).ready(function() {							
+		      $().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+</html>
