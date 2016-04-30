@@ -1,0 +1,2441 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    142834,       2432]
+NotebookOptionsPosition[    141194,       2370]
+NotebookOutlinePosition[    141572,       2387]
+CellTagsIndexPosition[    141529,       2384]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Assignment 1", "Title",
+ CellChangeTimes->{{3.651163249584736*^9, 3.651163254056362*^9}, {
+  3.651163523375786*^9, 3.651163526158741*^9}, {3.655648992671927*^9, 
+  3.655648995174983*^9}, {3.6614490431217957`*^9, 3.6614490447356873`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Digital Humanities 1011B", "Chapter",
+ CellChangeTimes->{{3.6511632289941177`*^9, 3.651163245097763*^9}, {
+  3.6614490757656813`*^9, 3.6614490798749723`*^9}}],
+
+Cell["\<\
+Handed out: 13 Jan 2016
+Due date: 27 Jan 2016
+Zero date: 03 Feb 2016\
+\>", "Subchapter",
+ CellChangeTimes->{{3.651163258088455*^9, 3.6511633041027813`*^9}, {
+  3.655649007071311*^9, 3.655649022685974*^9}, {3.6556490583491*^9, 
+  3.655649058748383*^9}, {3.661449088258033*^9, 3.661449112326542*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Worth 10% of your final grade", "Subchapter",
+ CellChangeTimes->{{3.651165418980345*^9, 3.651165425635522*^9}, 
+   3.655649062116246*^9, {3.6614491184616547`*^9, 3.661449118504067*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Description", "Section",
+ CellChangeTimes->{{3.6511634475779753`*^9, 3.651163452881803*^9}, {
+  3.655649107395413*^9, 3.6556491088907003`*^9}}],
+
+Cell[TextData[{
+ "In this assignment, you are going to use the ",
+ StyleBox["Graphic",
+  FontWeight->"Bold"],
+ " command to make a work of visual art. It can be representational (i.e., a \
+picture of something) or abstract, and you will ",
+ StyleBox["not",
+  FontWeight->"Bold"],
+ " be judged on the aesthetic quality of the work."
+}], "Text",
+ CellChangeTimes->{{3.655649324242855*^9, 3.655649406206623*^9}, {
+  3.655649440942132*^9, 3.655649522907804*^9}, {3.655649562209938*^9, 
+  3.655649646343481*^9}, {3.6556511864066687`*^9, 3.655651187190755*^9}, {
+  3.661449150170026*^9, 3.661449218175664*^9}}],
+
+Cell[TextData[{
+ "Design your project so that you showcase your ability to apply methods that \
+you learned in class and by reading the online textbook. That is, your \
+picture should make use of symbols, functions and relative coordinates. You \
+should have a mixture of random and non-random elements, and use the ",
+ StyleBox["Table",
+  FontWeight->"Bold"],
+ " command where appropriate. You should work with a number of the graphic \
+elements and techniques that we discussed in class: points, lines and \
+polygons; Bezier curves; scaling, rotation and translation; opacity; colour, \
+and so on."
+}], "Text",
+ CellChangeTimes->{{3.6556504561615143`*^9, 3.655650504943461*^9}, {
+  3.6556505674447603`*^9, 3.6556506373636713`*^9}, {3.655650675176702*^9, 
+  3.655650693728648*^9}, {3.655652449617144*^9, 3.655652450727857*^9}, {
+  3.661449236981262*^9, 3.661449277175778*^9}, {3.661449359157407*^9, 
+  3.66144936218292*^9}, {3.66144952580567*^9, 3.6614497491751003`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rubric", "Section",
+ CellChangeTimes->{{3.6511634475779753`*^9, 3.651163452881803*^9}, {
+  3.655649107395413*^9, 3.655649132057863*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Influences (30%)", "Subsubsection",
+ CellChangeTimes->{{3.6556491919438963`*^9, 3.65564919801554*^9}, {
+  3.655649775298683*^9, 3.65564978905767*^9}, {3.6556500458799257`*^9, 
+  3.6556500459764767`*^9}, {3.65565061431487*^9, 3.655650615378804*^9}, {
+  3.6614493737874537`*^9, 3.66144937493045*^9}, {3.661450285613516*^9, 
+  3.6614502971717567`*^9}}],
+
+Cell["\<\
+Better than average: goes well beyond examples shown in class and in the help \
+files to create something new.\
+\>", "Text",
+ CellChangeTimes->{{3.661449772260388*^9, 3.661449788177752*^9}}],
+
+Cell["\<\
+Average: incorporates code or ideas from one or more of the programs shown in \
+class or in the help files.\
+\>", "Text",
+ CellChangeTimes->{{3.661449790921297*^9, 3.6614498089189663`*^9}}],
+
+Cell["\<\
+Worse than average: code taken from class examples with little or no \
+modification.\
+\>", "Text",
+ CellChangeTimes->{{3.661449811646186*^9, 3.661449825340497*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Presentation of Code (35%)", "Subsubsection",
+ CellChangeTimes->{{3.65564922289507*^9, 3.655649224110792*^9}, {
+  3.655649780185624*^9, 3.655649793849786*^9}, {3.655650049271635*^9, 
+  3.655650049464356*^9}, {3.655650618218729*^9, 3.655650618571372*^9}, {
+  3.6614502519471207`*^9, 3.661450300051477*^9}}],
+
+Cell["\<\
+Better than average: code clearly laid out and commented, with appropriate \
+use of symbols and functions, and meaningful naming.\
+\>", "Text",
+ CellChangeTimes->{{3.6614498353791027`*^9, 3.661449896586666*^9}, {
+  3.6614499872704763`*^9, 3.661449991134593*^9}}],
+
+Cell["Average: some attempt to clarify and organize code.", "Text",
+ CellChangeTimes->{{3.6614498414661427`*^9, 3.6614498440497293`*^9}, {
+  3.661449901090106*^9, 3.6614499235910254`*^9}, {3.66144999862883*^9, 
+  3.6614500085714817`*^9}}],
+
+Cell["\<\
+Worse than average: few or no comments, meaningless names, little or no use \
+of symbols or functions.\
+\>", "Text",
+ CellChangeTimes->{{3.6614498457057*^9, 3.6614498486254*^9}, {
+  3.661449941364849*^9, 3.6614499538428698`*^9}, {3.661450012650879*^9, 
+  3.661450037543604*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Random and Nonrandom Elements (35%)", "Subsubsection",
+ CellChangeTimes->{{3.6556499470596027`*^9, 3.655649958283106*^9}, {
+  3.655650059247612*^9, 3.6556500735106583`*^9}, {3.6614494481282787`*^9, 
+  3.661449475308845*^9}, {3.6614502930762987`*^9, 3.661450302235321*^9}}],
+
+Cell["\<\
+Better than average: strategically limited randomness is used to create \
+variation in position, shape, orientation, etc. of graphic elements to create \
+visual interest; repeated elements are generated with code.\
+\>", "Text",
+ CellChangeTimes->{{3.6614498353791027`*^9, 3.661449839506549*^9}, {
+  3.6614500608618393`*^9, 3.661450146776511*^9}, {3.661450203568894*^9, 
+  3.661450205632682*^9}}],
+
+Cell["\<\
+Average: some use of randomness and code-generated repetition.\
+\>", "Text",
+ CellChangeTimes->{{3.6614498414661427`*^9, 3.6614498440497293`*^9}, {
+  3.6614501499042*^9, 3.661450164101838*^9}, {3.6614502141511908`*^9, 
+  3.6614502159190893`*^9}}],
+
+Cell["\<\
+Worse than average: no randomness, or randomness used to adjust a single \
+variable (e.g., hue, position) without apparent motivation.\
+\>", "Text",
+ CellChangeTimes->{{3.6614498457057*^9, 3.6614498486254*^9}, {
+   3.6614501688214607`*^9, 3.661450194681925*^9}, 3.661450314986792*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Make sure to include your information in your notebook!", "Section",
+ CellChangeTimes->{{3.6511634475779753`*^9, 3.651163452881803*^9}, {
+  3.655649115522172*^9, 3.6556491258102016`*^9}}],
+
+Cell[TextData[{
+ "Name: ",
+ StyleBox["Eric Bachmeier",
+  FontColor->GrayLevel[0]]
+}], "Subsection",
+ CellChangeTimes->{{3.651163456585217*^9, 3.651163457633196*^9}, {
+  3.66231029231446*^9, 3.6623102944704847`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Email: ",
+ StyleBox["ebachme@uwo.ca\n",
+  FontColor->GrayLevel[0]]
+}], "Subsection",
+ CellChangeTimes->{{3.651163467720752*^9, 3.651163468968869*^9}, {
+   3.662310296030547*^9, 3.662310299382596*^9}, 3.66231068717627*^9, {
+   3.662734021640354*^9, 3.662734026853798*^9}, 3.662734073630931*^9, {
+   3.662734361153071*^9, 3.662734454807495*^9}, 3.6709781526307096`*^9}],
+
+Cell["\<\
+Assignment Specs:
+
+- Symbols for the apps, time and date lebals etc.
+- Functions for creating an iphone at desired coordinates
+- Relative Coordinates for the features on the iphone from given coordinates
+- Randomness in the colours on the apps, background, number of apps on \
+screen, and polygon points on app logos
+- Points for front facing iphone camera
+- Line used for iphone speaker
+- Polygons used for app logos designs (star shape)
+- Curves used on app logos for a 5 point bezier curve
+- Scaling used on the bezier curves and other app logos to fit on the screen \
+better
+- Rotation on the app logos and the display in the final picture
+- Translation on the three iphone in the drawn scene
+- Opacity on the background of the iphone dots
+- Colour used on all of the iphone components
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.66273403085182*^9, 3.6627342625395403`*^9}, 
+   3.662735601302114*^9, 3.662736866490396*^9, {3.663077544313562*^9, 
+   3.663077544425992*^9}, {3.663080881030587*^9, 3.663080901779174*^9}, {
+   3.66308093685964*^9, 3.663080989845652*^9}, {3.663081712627554*^9, 
+   3.663081724952154*^9}, {3.663083524097293*^9, 3.663083615018423*^9}, {
+   3.663085958743742*^9, 3.663085960295952*^9}, {3.6630862657540417`*^9, 
+   3.6630863104577093`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Background", " ", "for", " ", "the", " ", "iphone", " ", "image"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"background", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"White", ",", " ", 
+       RowBox[{"Rectangle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"35", ",", "20"}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Symbol", " ", "for", " ", "a", " ", "single", " ", "app", " ", "icon"}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"app", "[", 
+      RowBox[{"{", 
+       RowBox[{"xApp_", ",", "yApp_"}], "}"}], "]"}], " ", ":=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Hue", "[", 
+        RowBox[{
+         RowBox[{"RandomReal", "[", "]"}], ",", "1", ",", "1"}], "]"}], ",", 
+       RowBox[{"Rectangle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"xApp", "+", "1"}], ",", 
+           RowBox[{"yApp", "+", "10"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"xApp", "+", "2.5"}], ",", 
+           RowBox[{"yApp", "+", "11.5"}]}], "}"}], ",", 
+         RowBox[{"RoundingRadius", "\[Rule]", "0.3"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Bezier", " ", "curve", " ", "looking", " ", "app", " ", "logos"}], 
+          " ", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Scale", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"White", ",", 
+              RowBox[{"Thickness", "[", "Medium", "]"}], ",", 
+              RowBox[{"Dashing", "[", "None", "]"}], ",", 
+              RowBox[{"CapForm", "[", "\"\<Round\>\"", "]"}], ",", 
+              RowBox[{"JoinForm", "[", "\"\<Round\>\"", "]"}], ",", 
+              RowBox[{"BezierCurve", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"xApp", "+", "1.85"}], ",", 
+                    RowBox[{"yApp", "+", "10.4"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"xApp", "+", "1"}], ",", 
+                    RowBox[{"yApp", "+", "10.75"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"xApp", "+", "2"}], ",", 
+                    RowBox[{"yApp", "+", "11.25"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"xApp", "+", "1.5"}], ",", 
+                    RowBox[{"yApp", "+", "10.75"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"xApp", "+", "1"}], ",", 
+                    RowBox[{"yApp", "+", "10.25"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"xApp", "+", "1.5"}], ",", 
+                    RowBox[{"yApp", "+", "11.25"}]}], "}"}]}], "}"}], ",", 
+                RowBox[{"SplineClosed", "\[Rule]", "True"}]}], "]"}]}], "}"}],
+             ",", 
+            RowBox[{"{", 
+             RowBox[{"1.5", ",", "1.5"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "Star", " ", "shaped", " ", "polygon", " ", "app", " ", "logos"}], 
+           " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"Rotate", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"White", ",", 
+              RowBox[{"Thickness", "[", ".0065", "]"}], ",", 
+              RowBox[{"CapForm", "[", "\"\<Round\>\"", "]"}], ",", 
+              RowBox[{"JoinForm", "[", "\"\<Round\>\"", "]"}], ",", 
+              RowBox[{"Polygon", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "2.1"}], ",", 
+                   RowBox[{"yApp", "+", "10.4"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "1.25"}], ",", 
+                   RowBox[{"yApp", "+", "10.75"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "2.25"}], ",", 
+                   RowBox[{"yApp", "+", "11.25"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "1.75"}], ",", 
+                   RowBox[{"yApp", "+", "10.75"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "1.25"}], ",", 
+                   RowBox[{"yApp", "+", "10.25"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "1.75"}], ",", 
+                   RowBox[{"yApp", "+", "11.25"}]}], "}"}]}], "}"}], "]"}]}], 
+             "}"}], ",", 
+            RowBox[{
+             RowBox[{"RandomInteger", "[", "359", "]"}], " ", "Degree"}]}], 
+           "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{"CirclePoints", " ", "polygon", " ", "app", " ", "logos"}],
+            " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"Rotate", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"White", ",", 
+              RowBox[{"Thickness", "[", ".0065", "]"}], ",", 
+              RowBox[{"RandomChoice", "[", 
+               RowBox[{"{", 
+                RowBox[{"Dotted", ",", 
+                 RowBox[{"Dashing", "[", "None", "]"}]}], "}"}], "]"}], ",", 
+              RowBox[{"CapForm", "[", "\"\<Round\>\"", "]"}], ",", 
+              RowBox[{"JoinForm", "[", "\"\<Round\>\"", "]"}], ",", 
+              RowBox[{"Polygon", "[", 
+               RowBox[{"CirclePoints", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"xApp", "+", "1.75"}], ",", 
+                   RowBox[{"yApp", "+", "10.75"}]}], "}"}], ",", "0.5", ",", 
+                 RowBox[{"RandomInteger", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"3", ",", "9"}], "}"}], "]"}]}], "]"}], "]"}]}], 
+             "}"}], ",", 
+            RowBox[{
+             RowBox[{"RandomInteger", "[", "359", "]"}], " ", "Degree"}]}], 
+           "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}], 
+        "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}]}], ";"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Function", " ", "to", " ", "create", " ", "the", " ", "iphone", " ", 
+     "at", " ", "passed", " ", "coordinates"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"drawiphone", "[", 
+      RowBox[{"{", 
+       RowBox[{"x_", ",", "y_", ",", "f_"}], "}"}], "]"}], " ", ":=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"EdgeForm", "[", "Black", "]"}], ",", "White", ",", 
+       RowBox[{"Rectangle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "0"}], ",", 
+           RowBox[{"y", "+", "0"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "8"}], ",", 
+           RowBox[{"y", "+", "14"}]}], "}"}], ",", 
+         RowBox[{"RoundingRadius", "\[Rule]", "0.9"}]}], "]"}], ",", 
+       RowBox[{"Thickness", "[", "0.018", "]"}], ",", "Black", ",", 
+       RowBox[{"Thickness", "[", "Medium", "]"}], ",", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"x", "+", "3.3"}], ",", 
+            RowBox[{"y", "+", "13"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"x", "+", "4.7"}], ",", 
+            RowBox[{"y", "+", "13"}]}], "}"}]}], "}"}], "]"}], ",", "Black", 
+       ",", 
+       RowBox[{"Opacity", "[", "0.5", "]"}], ",", 
+       RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+       RowBox[{"Point", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "4"}], ",", 
+          RowBox[{"y", "+", "13.5"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Opacity", "[", "1", "]"}], ",", 
+       RowBox[{"PointSize", "[", "Small", "]"}], ",", 
+       RowBox[{"Point", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"x", "+", "4"}], ",", 
+          RowBox[{"y", "+", "13.5"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Thickness", "[", "Medium", "]"}], ",", 
+       RowBox[{"Circle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "4"}], ",", 
+           RowBox[{"y", "+", "1"}]}], "}"}], ",", "0.7"}], "]"}], ",", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "The", " ", "background", " ", "screen", " ", "part", " ", "of", " ", 
+         "the", " ", "iphone", " ", "with", " ", "random", " ", "colour"}], 
+        " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"RandomColor", "[", "]"}], ",", 
+       RowBox[{"Rectangle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "0.4"}], ",", 
+           RowBox[{"y", "+", "2"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "7.6"}], ",", 
+           RowBox[{"y", "+", "12.5"}]}], "}"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Pattern", " ", "on", " ", "the", " ", "background", " ", "random", 
+         " ", "brightness"}], " ", "*)"}], " ", "\[IndentingNewLine]", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Hue", "[", 
+            RowBox[{
+             RowBox[{"RandomReal", "[", "]"}], ",", "1", ",", 
+             RowBox[{
+              RowBox[{"RandomReal", "[", "]"}], "+", "0.4"}]}], "]"}], ",", 
+           RowBox[{"EdgeForm", "[", "None", "]"}], ",", 
+           RowBox[{"Opacity", "[", "0.4", "]"}], ",", 
+           RowBox[{"Disk", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"x", "+", "xB"}], ",", 
+               RowBox[{"y", "+", "yB"}]}], "}"}], ",", "0.3"}], "]"}]}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"xB", ",", "0.7", ",", "7.3", ",", "0.6"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"yB", ",", "2.3", ",", "12.4", ",", "0.6"}], "}"}]}], "]"}],
+        ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "The", " ", "apps", " ", "on", " ", "the", " ", "phone", " ", 
+         "screen"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"app", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "+", "0.1"}], ",", 
+              RowBox[{"y", "-", "h"}]}], "}"}], "]"}], ",", 
+           RowBox[{"app", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "+", "2.2"}], ",", 
+              RowBox[{"y", "-", "h"}]}], "}"}], "]"}], ",", 
+           RowBox[{"app", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "+", "4.3"}], ",", 
+              RowBox[{"y", "-", "h"}]}], "}"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"h", ",", 
+           RowBox[{"-", "0.2"}], ",", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.2", ",", "0.3", ",", "0.5"}], "}"}], "->", 
+             RowBox[{"{", 
+              RowBox[{"2.1", ",", "4.4", ",", "6.7"}], "}"}]}], "]"}], ",", 
+           "2.3"}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "iPhone", " ", "status", " ", "bar", " ", "and", " ", "clock"}], " ", 
+        "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "None", "]"}], ",", "Black", ",", 
+       RowBox[{"Rectangle", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "0.4"}], ",", 
+           RowBox[{"y", "+", "12.1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "7.6"}], ",", 
+           RowBox[{"y", "+", "12.5"}]}], "}"}]}], "]"}], ",", 
+       RowBox[{"Text", "[", 
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<1:25pm  1/25/16\>\"", ",", 
+           RowBox[{"FontSize", "\[Rule]", 
+            RowBox[{"3", "*", "f"}]}], ",", "White", ",", 
+           RowBox[{"FontFamily", "\[Rule]", "\"\<Courier\>\""}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "+", "4"}], ",", 
+           RowBox[{"y", "+", "12.27"}]}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Draw", " ", "the", " ", "image", " ", "to", " ", "the", " ", "screen"}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Here", " ", "I", " ", "used", " ", "a", " ", "combination", " ", "of", 
+     " ", "translate", " ", "and", " ", "the", " ", "actual", " ", "draw", 
+     " ", "parameters", " ", "in", " ", "my", " ", "function", " ", "to", " ",
+      "make", " ", "the", " ", "iPhone", " ", "scene"}], " ", "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"background", ",", "\[IndentingNewLine]", 
+       RowBox[{"Scale", "[", 
+        RowBox[{
+         RowBox[{"drawiphone", "[", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "2.9"}], "}"}], "]"}], ",", "2.9"}], 
+        "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Scale", "[", 
+        RowBox[{
+         RowBox[{"Rotate", "[", 
+          RowBox[{
+           RowBox[{"drawiphone", "[", 
+            RowBox[{"{", 
+             RowBox[{"29", ",", "14", ",", "2.3"}], "}"}], "]"}], ",", 
+           RowBox[{"38", "Degree"}]}], "]"}], ",", "2.3"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Translate", "[", 
+        RowBox[{
+         RowBox[{"Scale", "[", 
+          RowBox[{
+           RowBox[{"Rotate", "[", 
+            RowBox[{
+             RowBox[{"drawiphone", "[", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0", ",", "1.9"}], "}"}], "]"}], ",", 
+             RowBox[{"90", "Degree"}]}], "]"}], ",", "1.9"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"28", ",", 
+           RowBox[{"-", "12.71"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.662749825551352*^9, 3.662749901075075*^9}, {
+   3.662749932880527*^9, 3.662749954531234*^9}, {3.662750008007266*^9, 
+   3.662750009937326*^9}, {3.662750063358635*^9, 3.662750067420197*^9}, {
+   3.66275010334018*^9, 3.6627501691837797`*^9}, {3.662750304479624*^9, 
+   3.662750305111999*^9}, {3.6628481572384853`*^9, 3.662848175263994*^9}, {
+   3.662848249251521*^9, 3.662848273261733*^9}, {3.6628483469852667`*^9, 
+   3.662848356318013*^9}, {3.662848426631899*^9, 3.662848442444672*^9}, 
+   3.662848504047122*^9, {3.663076449304545*^9, 3.6630764574959717`*^9}, {
+   3.663076522971472*^9, 3.6630765232588387`*^9}, {3.66307657658943*^9, 
+   3.663076752462481*^9}, {3.663076834492663*^9, 3.663076894641382*^9}, {
+   3.6630770117268257`*^9, 3.663077014908437*^9}, {3.6630771250017233`*^9, 
+   3.663077250104794*^9}, {3.663077286725133*^9, 3.663077289412735*^9}, {
+   3.6630775227388973`*^9, 3.6630775879775877`*^9}, {3.663077619707292*^9, 
+   3.6630777158406*^9}, {3.663077747910466*^9, 3.663077751101409*^9}, {
+   3.663077831686651*^9, 3.6630778617851963`*^9}, {3.66307790303789*^9, 
+   3.6630780126847963`*^9}, {3.6630780502003*^9, 3.663078068326211*^9}, {
+   3.663078260378874*^9, 3.663078293011894*^9}, {3.6630783597090893`*^9, 
+   3.6630783935346518`*^9}, {3.66307843016685*^9, 3.663078444336659*^9}, {
+   3.663078475770557*^9, 3.6630784763769283`*^9}, {3.663078526138013*^9, 
+   3.663078535740789*^9}, {3.663078781833844*^9, 3.6630787825206614`*^9}, {
+   3.663078850362618*^9, 3.66307890409968*^9}, {3.663078968768113*^9, 
+   3.66307897599776*^9}, {3.663079022360271*^9, 3.663079098440329*^9}, {
+   3.6630792885136547`*^9, 3.66307931766966*^9}, {3.6630793860719967`*^9, 
+   3.663079398168063*^9}, {3.6630794328116302`*^9, 3.663079469097806*^9}, {
+   3.663079513540723*^9, 3.663079551772086*^9}, {3.6630796013745327`*^9, 
+   3.663079603885961*^9}, {3.663079666527421*^9, 3.663079733270165*^9}, {
+   3.663079764933187*^9, 3.663079775473529*^9}, {3.663079821459628*^9, 
+   3.663079986543558*^9}, {3.663080029818996*^9, 3.663080094337619*^9}, {
+   3.6630801465324163`*^9, 3.663080340943138*^9}, {3.663080373786393*^9, 
+   3.663080400775467*^9}, {3.6630805205089207`*^9, 3.663080646012497*^9}, {
+   3.6630806842128763`*^9, 3.663080766946982*^9}, {3.663080800470818*^9, 
+   3.663080872750197*^9}, {3.663081014196928*^9, 3.663081016670541*^9}, {
+   3.663081064075899*^9, 3.663081085650928*^9}, {3.6630811439990053`*^9, 
+   3.6630812642480917`*^9}, {3.663081300901278*^9, 3.663081364537611*^9}, {
+   3.663081609706574*^9, 3.663081611472658*^9}, {3.663081657243878*^9, 
+   3.663081688292544*^9}, {3.663081734063555*^9, 3.663081748484497*^9}, {
+   3.6630817943597803`*^9, 3.6630818969280148`*^9}, {3.663082063096279*^9, 
+   3.663082156454734*^9}, {3.6630821932818003`*^9, 3.663082311385413*^9}, {
+   3.663082367700952*^9, 3.663082453239333*^9}, {3.663082543649605*^9, 
+   3.663082566617262*^9}, {3.663082617620216*^9, 3.663082657435445*^9}, {
+   3.663082710256227*^9, 3.663082790024054*^9}, {3.66308284678686*^9, 
+   3.663082873664939*^9}, {3.663082948620762*^9, 3.663083082257804*^9}, {
+   3.6630831659337807`*^9, 3.663083228148797*^9}, {3.663083264343835*^9, 
+   3.663083284390486*^9}, {3.663083318216606*^9, 3.6630833204401293`*^9}, {
+   3.6630833671951103`*^9, 3.663083406209709*^9}, {3.6630834606137953`*^9, 
+   3.6630834746681643`*^9}, {3.6630836549113493`*^9, 
+   3.6630837159204197`*^9}, {3.663083808781865*^9, 3.6630838484268103`*^9}, {
+   3.663083893686142*^9, 3.663083905134391*^9}, {3.6630839483574047`*^9, 
+   3.663083990538253*^9}, {3.663084023989188*^9, 3.66308403481002*^9}, {
+   3.663084071141692*^9, 3.663084135314946*^9}, {3.663084177698284*^9, 
+   3.6630842322449837`*^9}, {3.663084294932157*^9, 3.6630843177289133`*^9}, {
+   3.663084413316799*^9, 3.663084509620105*^9}, {3.6630845516109*^9, 
+   3.6630845828402033`*^9}, {3.66308462413*^9, 3.6630846621146803`*^9}, {
+   3.663084740805559*^9, 3.663084772452701*^9}, {3.663084820407998*^9, 
+   3.663084936506755*^9}, {3.663084976092978*^9, 3.6630852038847218`*^9}, {
+   3.663085239146345*^9, 3.663085448237042*^9}, {3.663085488816787*^9, 
+   3.6630855363281603`*^9}, {3.6630855812667217`*^9, 
+   3.6630857222344027`*^9}, {3.663085760270217*^9, 3.663085770657193*^9}, {
+   3.663085834704503*^9, 3.6630859910705433`*^9}, {3.663086048879711*^9, 
+   3.663086253867688*^9}, {3.663327196402269*^9, 3.663327198892774*^9}, {
+   3.663336875088958*^9, 3.663336876843136*^9}, {3.663337018619191*^9, 
+   3.663337032048774*^9}, {3.663338691411353*^9, 3.6633387040164757`*^9}, {
+   3.6633387597661324`*^9, 3.663338760109981*^9}, {3.663339376874772*^9, 
+   3.663339383297537*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {GrayLevel[1], RectangleBox[{0, 0}, {35, 20}]}, 
+   GeometricTransformationBox[
+    {GrayLevel[1], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}, {8, 14},
+      RoundingRadius->0.9], 
+     {GrayLevel[0], Thickness[Medium], LineBox[{{3.3, 13}, {4.7, 13}}], 
+      {GrayLevel[0], PointSize[Large], Opacity[0.5], PointBox[{4, 13.5}], 
+       {PointSize[Small], Opacity[1], PointBox[{4, 13.5}], 
+        {Thickness[Medium], CircleBox[{4, 1}, 0.7], 
+         {RGBColor[
+          0.4421887050783402, 0.20322659107385999`, 0.648339675712934], 
+          RectangleBox[{0.4, 2}, {7.6, 12.5}], {{
+            {Hue[0.11847016255731724`, 1, 0.7395415049916497], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 2.3}, 0.3]}, 
+            {Hue[0.7918092101612495, 1, 1.145796331320446], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 2.9}, 0.3]}, 
+            {Hue[0.9115004642099533, 1, 0.5475479657412409], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 3.5}, 0.3]}, 
+            {Hue[0.8381163590695493, 1, 0.5669959921688453], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 4.1}, 0.3]}, 
+            {Hue[0.030204170531319185`, 1, 1.1838416833702912`], Opacity[0.4],
+              EdgeForm[None], DiskBox[{0.7, 4.699999999999999}, 0.3]}, 
+            {Hue[0.4362822203645833, 1, 1.034884299403076], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 5.3}, 0.3]}, 
+            {Hue[0.8166250723089481, 1, 0.6144445388681293], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.31430340961703207`, 1, 0.5983914369024118], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 6.5}, 0.3]}, 
+            {Hue[0.2191603380867182, 1, 0.5533262034030534], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 7.1}, 0.3]}, 
+            {Hue[0.6130897382303822, 1, 0.44645766481166904`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 7.699999999999999}, 0.3]}, 
+            {Hue[0.8814639235233692, 1, 1.1783227296572059`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 8.3}, 0.3]}, 
+            {Hue[0.7503119060384777, 1, 0.42488349229854905`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 8.899999999999999}, 0.3]}, 
+            {Hue[0.41832188092568945`, 1, 0.5397113681934517], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 9.5}, 0.3]}, 
+            {Hue[0.9869780573469544, 1, 0.9325785854322425], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 10.1}, 0.3]}, 
+            {Hue[0.9318962335695156, 1, 1.1609221455306677`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 10.7}, 0.3]}, 
+            {Hue[0.5422170708565897, 1, 0.8586245502372941], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 11.3}, 0.3]}, 
+            {Hue[0.93293463786733, 1, 0.926591495812921], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{0.7, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.7591941700077092, 1, 0.40123163410745566`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 2.3}, 0.3]}, 
+            {Hue[0.5732042799172445, 1, 0.5092775107607007], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 2.9}, 0.3]}, 
+            {Hue[0.9623934066738737, 1, 0.9182068570055039], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 3.5}, 0.3]}, 
+            {Hue[0.14071306590706278`, 1, 0.8009211137792521], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 4.1}, 0.3]}, 
+            {Hue[0.9761765069311137, 1, 0.8860456011297239], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{1.2999999999999998`, 4.699999999999999}, 0.3]}, 
+            {Hue[0.8440722317797624, 1, 0.5807746866404307], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 5.3}, 0.3]}, 
+            {Hue[0.7030849771312297, 1, 0.8738790481556947], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{1.2999999999999998`, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.46192140846506224`, 1, 0.8505391299250081], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 6.5}, 0.3]}, 
+            {Hue[0.03346217757355441, 1, 0.6141647864779033], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 7.1}, 0.3]}, 
+            {Hue[0.13871369146095258`, 1, 1.2016432700967012`], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{1.2999999999999998`, 7.699999999999999}, 0.3]}, 
+            {Hue[0.146725978595726, 1, 0.9877399705458493], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 8.3}, 0.3]}, 
+            {Hue[0.6657469083335645, 1, 0.9503909811764232], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{1.2999999999999998`, 8.899999999999999}, 0.3]}, 
+            {Hue[0.3468604357014895, 1, 0.9129066065433925], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 9.5}, 0.3]}, 
+            {Hue[0.9333671355903261, 1, 1.0586585370164014`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 10.1}, 0.3]}, 
+            {Hue[0.8498531739639865, 1, 1.316318641879696], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 10.7}, 0.3]}, 
+            {Hue[0.7707736641543215, 1, 0.4050262561544845], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.2999999999999998`, 11.3}, 0.3]}, 
+            {Hue[0.381829251147187, 1, 0.44232255795203057`], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{1.2999999999999998`, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.4717206363864581, 1, 1.0661930691188592`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 2.3}, 0.3]}, 
+            {Hue[0.4034028454111642, 1, 0.7487458107577204], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 2.9}, 0.3]}, 
+            {Hue[0.24916623303107377`, 1, 0.7282209697016887], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 3.5}, 0.3]}, 
+            {Hue[0.73661842116995, 1, 1.3204592276125426`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 4.1}, 0.3]}, 
+            {Hue[0.8688867632895789, 1, 0.4970370843060886], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 4.699999999999999}, 0.3]}, 
+            {Hue[0.8454902569995657, 1, 0.726790318690497], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 5.3}, 0.3]}, 
+            {Hue[0.5410782132918157, 1, 1.101529905708333], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.3085370030638688, 1, 1.1155043700708664`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 6.5}, 0.3]}, 
+            {Hue[0.14411775303479502`, 1, 0.983690124181232], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 7.1}, 0.3]}, 
+            {Hue[0.7518831615456134, 1, 1.0979870134343974`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 7.699999999999999}, 0.3]}, 
+            {Hue[0.35960498122188445`, 1, 0.9712908444833012], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 8.3}, 0.3]}, 
+            {Hue[0.11016052686104305`, 1, 0.8056451188652626], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 8.899999999999999}, 0.3]}, 
+            {Hue[0.3332622963171856, 1, 1.2986868783372456`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 9.5}, 0.3]}, 
+            {Hue[0.10488686395791835`, 1, 0.8937989788268842], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 10.1}, 0.3]}, 
+            {Hue[0.7656932992607246, 1, 0.8907673286510672], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 10.7}, 0.3]}, 
+            {Hue[0.9905193055944335, 1, 0.5132764657758074], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 11.3}, 0.3]}, 
+            {Hue[0.2978226423472097, 1, 0.6523683730179374], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{1.9, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.9109724455561978, 1, 0.8650563770407579], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 2.3}, 0.3]}, 
+            {Hue[0.6355865155743157, 1, 0.8429367481773588], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 2.9}, 0.3]}, 
+            {Hue[0.8315815258992949, 1, 0.9065659623837975], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 3.5}, 0.3]}, 
+            {Hue[0.565033590590041, 1, 1.1463605399139611`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 4.1}, 0.3]}, 
+            {Hue[0.4162259684728393, 1, 1.0146441103481734`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 4.699999999999999}, 0.3]}, 
+            {Hue[0.7367312790136362, 1, 0.9721872664876056], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 5.3}, 0.3]}, 
+            {Hue[0.25559495006383437`, 1, 0.5183644414698815], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.7691096749070663, 1, 0.8843079723616166], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 6.5}, 0.3]}, 
+            {Hue[0.03135979891309559, 1, 1.0592091480837453`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 7.1}, 0.3]}, 
+            {Hue[0.7377417887633924, 1, 0.761778862561573], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 7.699999999999999}, 0.3]}, 
+            {Hue[0.4178491020309283, 1, 1.1207125058627732`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 8.3}, 0.3]}, 
+            {Hue[0.41523203740564374`, 1, 1.2703909615013038`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 8.899999999999999}, 0.3]}, 
+            {Hue[0.773556054245158, 1, 0.48873412207773226`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 9.5}, 0.3]}, 
+            {Hue[0.7672617839608027, 1, 0.9941972115057564], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 10.1}, 0.3]}, 
+            {Hue[0.22066501382701054`, 1, 0.7761931270251617], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 10.7}, 0.3]}, 
+            {Hue[0.929369440776397, 1, 1.31348523236584], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 11.3}, 0.3]}, 
+            {Hue[0.8734951188013163, 1, 1.094552802939631], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{2.5, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.1877248219447305, 1, 0.9776242725900456], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 2.3}, 0.3]}, 
+            {Hue[0.08909406232017658, 1, 0.50453908581241], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 2.9}, 0.3]}, 
+            {Hue[0.49763113065498743`, 1, 0.7927724063599043], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 3.5}, 0.3]}, 
+            {Hue[0.8163297474494411, 1, 0.8008828247683327], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 4.1}, 0.3]}, 
+            {Hue[0.22698096079640306`, 1, 0.7201915749107214], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{3.0999999999999996`, 4.699999999999999}, 0.3]}, 
+            {Hue[0.0061693563098117465`, 1, 1.2450074497234445`], Opacity[
+             0.4], EdgeForm[None], 
+             DiskBox[{3.0999999999999996`, 5.3}, 0.3]}, 
+            {Hue[0.9322702618498098, 1, 1.0112358397944226`], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{3.0999999999999996`, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.3598960461307843, 1, 0.5326145958892577], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 6.5}, 0.3]}, 
+            {Hue[0.27573454449770507`, 1, 0.4272343764346499], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 7.1}, 0.3]}, 
+            {Hue[0.5900547614672533, 1, 1.2822748710668503`], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{3.0999999999999996`, 7.699999999999999}, 0.3]}, 
+            {Hue[0.2612202823631573, 1, 1.1668067122623516`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 8.3}, 0.3]}, 
+            {Hue[0.17744576831765158`, 1, 1.273959559615827], Opacity[0.4], 
+             EdgeForm[None], 
+             DiskBox[{3.0999999999999996`, 8.899999999999999}, 0.3]}, 
+            {Hue[0.9037558176729852, 1, 0.9196582750150507], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 9.5}, 0.3]}, 
+            {Hue[0.24084797167205507`, 1, 0.49967231887238384`], Opacity[0.4],
+              EdgeForm[None], DiskBox[{3.0999999999999996`, 10.1}, 0.3]}, 
+            {Hue[0.810888966559453, 1, 1.357928502222852], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 10.7}, 0.3]}, 
+            {Hue[0.10528920956957588`, 1, 0.7234779182650214], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.0999999999999996`, 11.3}, 0.3]}, 
+            {Hue[0.008334270025124546, 1, 0.48452506859210975`], Opacity[0.4],
+              EdgeForm[None], 
+             DiskBox[{3.0999999999999996`, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.7431642731392403, 1, 1.182201968478498], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 2.3}, 0.3]}, 
+            {Hue[0.49314980598397895`, 1, 1.3045237728279795`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 2.9}, 0.3]}, 
+            {Hue[0.8684824138208267, 1, 0.5691052098353712], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 3.5}, 0.3]}, 
+            {Hue[0.6156976911917038, 1, 1.0350790678656572`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 4.1}, 0.3]}, 
+            {Hue[0.3738231431411334, 1, 1.3889447972457942`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 4.699999999999999}, 0.3]}, 
+            {Hue[0.21774895655649962`, 1, 0.6749004517478062], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 5.3}, 0.3]}, 
+            {Hue[0.5911843993082069, 1, 0.9321171010922568], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.3092235893897448, 1, 0.8570840490718105], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 6.5}, 0.3]}, 
+            {Hue[0.6173936413620837, 1, 0.7737228900562553], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 7.1}, 0.3]}, 
+            {Hue[0.5575227367800915, 1, 0.44641448474929046`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 7.699999999999999}, 0.3]}, 
+            {Hue[0.9383645966770615, 1, 0.5616932369779485], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 8.3}, 0.3]}, 
+            {Hue[0.5703136598982983, 1, 1.1144332572091176`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 8.899999999999999}, 0.3]}, 
+            {Hue[0.7030567096551004, 1, 1.1257503604827934`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 9.5}, 0.3]}, 
+            {Hue[0.959188939346497, 1, 1.3792266538438458`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 10.1}, 0.3]}, 
+            {Hue[0.8245653482011175, 1, 0.8121550122873725], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 10.7}, 0.3]}, 
+            {Hue[0.12058186330997156`, 1, 0.6962570548290531], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 11.3}, 0.3]}, 
+            {Hue[0.5718606073615544, 1, 1.0603844389182848`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{3.7, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.5324509566205244, 1, 1.3531243367702048`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 2.3}, 0.3]}, 
+            {Hue[0.14347116281357564`, 1, 0.5967058462824978], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 2.9}, 0.3]}, 
+            {Hue[0.978946116336493, 1, 1.3668844294563267`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 3.5}, 0.3]}, 
+            {Hue[0.8018049374995599, 1, 1.0657972484910152`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 4.1}, 0.3]}, 
+            {Hue[0.03284814764711119, 1, 0.4706257386152931], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 4.699999999999999}, 0.3]}, 
+            {Hue[0.22339098931891788`, 1, 1.1958905343791986`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 5.3}, 0.3]}, 
+            {Hue[0.3719397991679405, 1, 0.5965968735438635], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.30462690348079824`, 1, 0.8293250227453882], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 6.5}, 0.3]}, 
+            {Hue[0.9031233041326827, 1, 1.2593159487270467`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 7.1}, 0.3]}, 
+            {Hue[0.693724257078403, 1, 0.8120823839900558], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 7.699999999999999}, 0.3]}, 
+            {Hue[0.6161156198207669, 1, 1.028586790844531], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 8.3}, 0.3]}, 
+            {Hue[0.9075873532075971, 1, 0.9499024058454687], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 8.899999999999999}, 0.3]}, 
+            {Hue[0.8409376010761798, 1, 1.0059554913226454`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 9.5}, 0.3]}, 
+            {Hue[0.29532529945257213`, 1, 1.0514036013934565`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 10.1}, 0.3]}, 
+            {Hue[0.8868156620239416, 1, 0.7606654884366782], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 10.7}, 0.3]}, 
+            {Hue[0.2429248624295075, 1, 0.7503704321515047], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 11.3}, 0.3]}, 
+            {Hue[0.7222469841311869, 1, 0.4333139195992869], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.3, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.8931396927839412, 1, 0.7168721974071904], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 2.3}, 0.3]}, 
+            {Hue[0.04626632096015548, 1, 1.100101124761054], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 2.9}, 0.3]}, 
+            {Hue[0.8404578503029203, 1, 1.2658109391952443`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 3.5}, 0.3]}, 
+            {Hue[0.6625242801505777, 1, 0.8663362000616447], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 4.1}, 0.3]}, 
+            {Hue[0.012839734985900186`, 1, 0.9727271728751093], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 4.699999999999999}, 0.3]}, 
+            {Hue[0.5509314351872003, 1, 0.8370745053625787], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 5.3}, 0.3]}, 
+            {Hue[0.9797305847796365, 1, 1.181866769547224], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.09035067761636095, 1, 0.7958301406032869], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 6.5}, 0.3]}, 
+            {Hue[0.658384727251307, 1, 1.1955492911380396`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 7.1}, 0.3]}, 
+            {Hue[0.4889777330134215, 1, 0.8390014244154161], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 7.699999999999999}, 0.3]}, 
+            {Hue[0.12305094802738359`, 1, 1.153572209900985], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 8.3}, 0.3]}, 
+            {Hue[0.6814862106607562, 1, 0.9797709381684089], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 8.899999999999999}, 0.3]}, 
+            {Hue[0.9684543908989571, 1, 0.6175335480075516], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 9.5}, 0.3]}, 
+            {Hue[0.5125759689826523, 1, 1.139050713554286], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 10.1}, 0.3]}, 
+            {Hue[0.7205706023298801, 1, 0.4803120534441384], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 10.7}, 0.3]}, 
+            {Hue[0.017321317209613607`, 1, 1.222956811817201], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 11.3}, 0.3]}, 
+            {Hue[0.5262765290394587, 1, 1.212934569771595], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{4.9, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.5295287273136888, 1, 1.1550421077470001`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 2.3}, 0.3]}, 
+            {Hue[0.6446561279554426, 1, 0.7981498065505997], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 2.9}, 0.3]}, 
+            {Hue[0.2544804528847109, 1, 1.3271693074108288`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 3.5}, 0.3]}, 
+            {Hue[0.7925489962200942, 1, 0.6223630956472702], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 4.1}, 0.3]}, 
+            {Hue[0.2550363795295101, 1, 1.200426383928816], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 4.699999999999999}, 0.3]}, 
+            {Hue[0.5488168946360525, 1, 0.9739862607594142], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 5.3}, 0.3]}, 
+            {Hue[0.4008514576480615, 1, 1.3859706456292833`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.14805481642637486`, 1, 1.3146518468457122`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 6.5}, 0.3]}, 
+            {Hue[0.07985909571269323, 1, 0.7857792845997021], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 7.1}, 0.3]}, 
+            {Hue[0.462334298940416, 1, 0.9351956844001325], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 7.699999999999999}, 0.3]}, 
+            {Hue[0.0922309858428656, 1, 0.6916521093203986], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 8.3}, 0.3]}, 
+            {Hue[0.9624870259825888, 1, 0.5121800243289173], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 8.899999999999999}, 0.3]}, 
+            {Hue[0.5908378854858276, 1, 1.0767783391588868`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 9.5}, 0.3]}, 
+            {Hue[0.21720142316434998`, 1, 0.754213840028224], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 10.1}, 0.3]}, 
+            {Hue[0.6244905653528232, 1, 1.2436027556201026`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 10.7}, 0.3]}, 
+            {Hue[0.0526019043834518, 1, 1.076057096134511], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 11.3}, 0.3]}, 
+            {Hue[0.6414390127033032, 1, 1.3155441494337405`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{5.5, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.5901371727520479, 1, 0.7597546406391676], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 2.3}, 0.3]}, 
+            {Hue[0.5141171244896787, 1, 1.0168852479419734`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 2.9}, 0.3]}, 
+            {Hue[0.05962803729978061, 1, 0.40657708587520214`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 3.5}, 0.3]}, 
+            {Hue[0.9810417882157769, 1, 1.3932448370996133`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 4.1}, 0.3]}, 
+            {Hue[0.03612818105617288, 1, 0.7250634259216543], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 4.699999999999999}, 0.3]}, 
+            {Hue[0.06821185659803164, 1, 1.1789437069110056`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 5.3}, 0.3]}, 
+            {Hue[0.43072013004736265`, 1, 1.1490061143631176`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.19943892977046218`, 1, 1.327842435473662], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 6.5}, 0.3]}, 
+            {Hue[0.5322727373174636, 1, 0.5744480846541485], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 7.1}, 0.3]}, 
+            {Hue[0.484580993304478, 1, 0.49606838282512566`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 7.699999999999999}, 0.3]}, 
+            {Hue[0.06560897360856166, 1, 1.132350864741587], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 8.3}, 0.3]}, 
+            {Hue[0.05059343264064964, 1, 1.1470000700547676`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 8.899999999999999}, 0.3]}, 
+            {Hue[0.9789385236457706, 1, 0.501810062357284], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 9.5}, 0.3]}, 
+            {Hue[0.4664267726697797, 1, 1.3927533084209696`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 10.1}, 0.3]}, 
+            {Hue[0.11546598166144428`, 1, 0.9839599789281693], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 10.7}, 0.3]}, 
+            {Hue[0.37076439196313915`, 1, 1.3356365658783278`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 11.3}, 0.3]}, 
+            {Hue[0.4831986330625191, 1, 0.9006766511878844], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.1, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.07839704736968778, 1, 1.1326939121329782`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 2.3}, 0.3]}, 
+            {Hue[0.9871289942136883, 1, 0.7357342983770591], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 2.9}, 0.3]}, 
+            {Hue[0.8076223617726068, 1, 1.2448116363089006`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 3.5}, 0.3]}, 
+            {Hue[0.37956977889269217`, 1, 1.1192755987427172`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 4.1}, 0.3]}, 
+            {Hue[0.600768269623819, 1, 1.0403900022938473`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 4.699999999999999}, 0.3]}, 
+            {Hue[0.6911830097381892, 1, 0.6806485308297311], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 5.3}, 0.3]}, 
+            {Hue[0.17185668532400333`, 1, 1.193762116179935], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.07090694985673629, 1, 0.4081901182168516], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 6.5}, 0.3]}, 
+            {Hue[0.8585343486429144, 1, 0.8491236937727901], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 7.1}, 0.3]}, 
+            {Hue[0.9710276300520901, 1, 0.6955164522310112], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 7.699999999999999}, 0.3]}, 
+            {Hue[0.6199568647080744, 1, 0.6164503343181179], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 8.3}, 0.3]}, 
+            {Hue[0.11777192597607855`, 1, 1.181574514681258], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 8.899999999999999}, 0.3]}, 
+            {Hue[0.414132525997847, 1, 0.7470299343951635], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 9.5}, 0.3]}, 
+            {Hue[0.6813403113484471, 1, 0.6083245413923976], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 10.1}, 0.3]}, 
+            {Hue[0.6097453502587924, 1, 1.1778695564650428`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 10.7}, 0.3]}, 
+            {Hue[0.9083828378106902, 1, 0.5089852865712724], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 11.3}, 0.3]}, 
+            {Hue[0.9336375085109982, 1, 1.0819969488442998`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{6.7, 11.899999999999999`}, 0.3]}}, {
+            {Hue[0.16346200727779503`, 1, 0.8204313267360362], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 2.3}, 0.3]}, 
+            {Hue[0.8837556534874722, 1, 0.5582768741809222], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 2.9}, 0.3]}, 
+            {Hue[0.05962110475067117, 1, 0.5490378911280306], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 3.5}, 0.3]}, 
+            {Hue[0.08724966014382485, 1, 1.2861738214247653`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 4.1}, 0.3]}, 
+            {Hue[0.7822825271055494, 1, 1.141407320801327], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 4.699999999999999}, 0.3]}, 
+            {Hue[0.05220076436597143, 1, 0.8117414293356008], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 5.3}, 0.3]}, 
+            {Hue[0.2988759909071492, 1, 0.4932233871187738], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 5.8999999999999995`}, 0.3]}, 
+            {Hue[0.7185899901394046, 1, 0.7718727709772354], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 6.5}, 0.3]}, 
+            {Hue[0.5457219305489338, 1, 0.8176182219294491], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 7.1}, 0.3]}, 
+            {Hue[0.09765166557520599, 1, 1.1218889641774208`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 7.699999999999999}, 0.3]}, 
+            {Hue[0.4333413741671033, 1, 0.9117123670543709], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 8.3}, 0.3]}, 
+            {Hue[0.0044945537860223705`, 1, 1.1384063563331925`], Opacity[
+             0.4], EdgeForm[None], DiskBox[{7.3, 8.899999999999999}, 0.3]}, 
+            {Hue[0.7199567182681781, 1, 1.2240666723822304`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 9.5}, 0.3]}, 
+            {Hue[0.854084590381101, 1, 0.7549087322075941], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 10.1}, 0.3]}, 
+            {Hue[0.8716166071102862, 1, 1.2639547512163998`], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 10.7}, 0.3]}, 
+            {Hue[0.011521995325381562`, 1, 0.9465884560270591], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 11.3}, 0.3]}, 
+            {Hue[0.42074491400195746`, 1, 0.8401727879258901], Opacity[0.4], 
+             EdgeForm[None], DiskBox[{7.3, 11.899999999999999`}, 0.3]}}}, {{
+            {Hue[0.7242614931727398, 1, 1], 
+             RectangleBox[{1.1, 10.2}, {2.6, 11.7},
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{1.9500000000000002`, 10.6}, {1.1, 10.95}, {
+                2.1, 11.45}, {1.6, 10.95}, {1.1, 10.45}, {1.6, 11.45}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+            {Hue[0.2913802096426872, 1, 1], 
+             RectangleBox[{3.2, 10.2}, {4.7, 11.7},
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{4.050000000000001, 10.6}, {3.2, 10.95}, {4.2, 
+                11.45}, {3.7, 10.95}, {3.2, 10.45}, {3.7, 11.45}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+            {Hue[0.8175461606743553, 1, 1], 
+             RectangleBox[{5.3, 10.2}, {6.8, 11.7},
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[0.0065], CapForm["Round"], JoinForm[
+               "Round"], 
+               PolygonBox[{{6.4, 10.6}, {5.55, 10.95}, {6.55, 11.45}, {6.05, 
+                10.95}, {5.55, 10.45}, {6.05, 
+                11.45}}]}, {{{-0.5, -0.8660254037844386}, {
+               0.8660254037844386, -0.5}}, Center}]}}, {
+            {Hue[0.20682502525594715`, 1, 1], 
+             RectangleBox[{1.1, 7.9}, {2.6, 9.4},
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{1.9500000000000002`, 8.3}, {1.1, 8.65}, {2.1, 
+                9.15}, {1.6, 8.65}, {1.1, 8.15}, {1.6, 9.15}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+            {Hue[0.31079649494006323`, 1, 1], 
+             RectangleBox[{3.2, 7.9}, {4.7, 9.4},
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{4.050000000000001, 8.3}, {3.2, 8.65}, {4.2, 
+                9.15}, {3.7, 8.65}, {3.2, 8.15}, {3.7, 9.15}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+            {Hue[0.17915632969870154`, 1, 1], 
+             RectangleBox[{5.3, 7.9}, {6.8, 9.4},
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{6.15, 8.3}, {5.3, 8.65}, {6.3, 9.15}, {5.8, 
+                8.65}, {5.3, 8.15}, {5.8, 9.15}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}}, {
+            {Hue[0.6286364299947595, 1, 1], 
+             RectangleBox[{1.1, 5.6000000000000005`}, {2.6, 7.1000000000000005`},
+              
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+               "Round"], JoinForm["Round"], 
+               PolygonBox[{{2.041341716182545, 5.8880602337443575`}, {
+                2.3119397662556436`, 6.158658283817456}, {2.3119397662556436`,
+                 6.541341716182545}, {2.041341716182545, 6.811939766255644}, {
+                1.6586582838174553`, 6.811939766255644}, {1.3880602337443566`,
+                 6.541341716182545}, {1.3880602337443566`, 
+                6.158658283817456}, {1.6586582838174548`, 
+                5.8880602337443575`}}]}, {{{0.0697564737441253, 
+               0.9975640502598242}, {-0.9975640502598242, 
+               0.0697564737441253}}, Center}]}, 
+            {Hue[0.3549969359829823, 1, 1], 
+             RectangleBox[{3.2, 5.6000000000000005`}, {4.7, 7.1000000000000005`},
+              
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+               "Round"], JoinForm["Round"], 
+               PolygonBox[{{4.141341716182545, 5.8880602337443575`}, {
+                4.411939766255643, 6.158658283817456}, {4.411939766255643, 
+                6.541341716182545}, {4.141341716182545, 6.811939766255644}, {
+                3.7586582838174554`, 6.811939766255644}, {3.4880602337443567`,
+                 6.541341716182545}, {3.4880602337443567`, 
+                6.158658283817456}, {3.758658283817455, 
+                5.8880602337443575`}}]}, {{{0.6691306063588582, 
+               0.7431448254773942}, {-0.7431448254773942, 
+               0.6691306063588582}}, Center}]}, 
+            {Hue[0.28149469908360314`, 1, 1], 
+             RectangleBox[{5.3, 5.6000000000000005`}, {6.8, 7.1000000000000005`},
+              
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{6.15, 6.000000000000001}, {5.3, 
+                6.3500000000000005`}, {6.3, 6.8500000000000005`}, {5.8, 
+                6.3500000000000005`}, {5.3, 5.8500000000000005`}, {5.8, 
+                6.8500000000000005`}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}}, {
+            {Hue[0.1884280083853549, 1, 1], 
+             RectangleBox[{1.1, 3.3000000000000007`}, {2.6, 4.800000000000001},
+              
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{1.9500000000000002`, 3.700000000000001}, {1.1,
+                 4.050000000000001}, {2.1, 4.550000000000001}, {1.6, 
+                4.050000000000001}, {1.1, 3.5500000000000007`}, {1.6, 
+                4.550000000000001}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+            {Hue[0.6167003133237596, 1, 1], 
+             RectangleBox[{3.2, 3.3000000000000007`}, {4.7, 4.800000000000001},
+              
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+               "Round"], JoinForm["Round"], 
+               BezierCurveBox[{{4.050000000000001, 3.700000000000001}, {3.2, 
+                4.050000000000001}, {4.2, 4.550000000000001}, {3.7, 
+                4.050000000000001}, {3.2, 3.5500000000000007`}, {3.7, 
+                4.550000000000001}},
+                SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+            {Hue[0.7417663128784246, 1, 1], 
+             RectangleBox[{5.3, 3.3000000000000007`}, {6.8, 4.800000000000001},
+              
+              RoundingRadius->0.3], GeometricTransformationBox[
+              {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+               "Round"], JoinForm["Round"], 
+               PolygonBox[{{6.266941869558779, 3.599515566048791}, {
+                6.537463956090912, 3.9387395330218435`}, {6.440915741234015, 
+                4.361744900929367}, {6.05, 4.550000000000001}, {
+                5.659084258765985, 4.361744900929367}, {5.562536043909088, 
+                3.9387395330218435`}, {5.833058130441221, 
+                3.599515566048791}}]}, {{{
+               0.573576436351046, -0.8191520442889918}, {0.8191520442889918, 
+               0.573576436351046}}, Center}]}}}}, 
+         {GrayLevel[0], EdgeForm[None], 
+          RectangleBox[{0.4, 12.1}, {7.6, 12.5}], InsetBox[
+           StyleBox["\<\"1:25pm  1/25/16\"\>",
+            StripOnInput->False,
+            LineColor->GrayLevel[1],
+            FrontFaceColor->GrayLevel[1],
+            BackFaceColor->GrayLevel[1],
+            GraphicsColor->GrayLevel[1],
+            FontFamily->"Courier",
+            FontSize->8.7,
+            FontColor->GrayLevel[1]], {4, 12.27}]}}}}}}, {{{2.9, 0.}, {0., 
+     2.9}}, Center}], GeometricTransformationBox[GeometricTransformationBox[
+     {GrayLevel[1], EdgeForm[GrayLevel[0]], RectangleBox[{29, 14}, {37, 28},
+       RoundingRadius->0.9], 
+      {GrayLevel[0], Thickness[Medium], LineBox[{{32.3, 27}, {33.7, 27}}], 
+       {GrayLevel[0], PointSize[Large], Opacity[0.5], PointBox[{33, 27.5}], 
+        {PointSize[Small], Opacity[1], PointBox[{33, 27.5}], 
+         {Thickness[Medium], CircleBox[{33, 15}, 0.7], 
+          {RGBColor[
+           0.9236497178574388, 0.7027197888156076, 0.1424973849413831], 
+           RectangleBox[{29.4, 16}, {36.6, 26.5}], {{
+             {Hue[0.08801025745535651, 1, 1.2001440973855662`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 16.3}, 0.3]}, 
+             {Hue[0.6407709343240173, 1, 0.5863882486514004], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 16.9}, 0.3]}, 
+             {Hue[0.8543622960248729, 1, 1.0885062735397208`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 17.5}, 0.3]}, 
+             {Hue[0.019687038283242364`, 1, 1.1355517355449498`], Opacity[
+              0.4], EdgeForm[None], DiskBox[{29.7, 18.1}, 0.3]}, 
+             {Hue[0.9620798678053002, 1, 1.1714504501827694`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 18.7}, 0.3]}, 
+             {Hue[0.0625734067336432, 1, 0.8102713001564662], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 19.3}, 0.3]}, 
+             {Hue[0.5846382343039465, 1, 0.5701432694059102], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 19.9}, 0.3]}, 
+             {Hue[0.041242333435981715`, 1, 0.8368181600138366], Opacity[0.4],
+               EdgeForm[None], DiskBox[{29.7, 20.5}, 0.3]}, 
+             {Hue[0.987936228705854, 1, 0.4182966649032728], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 21.1}, 0.3]}, 
+             {Hue[0.35965122260326066`, 1, 1.370935334091532], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 21.7}, 0.3]}, 
+             {Hue[0.24901140450722425`, 1, 0.7908813638989557], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 22.3}, 0.3]}, 
+             {Hue[0.9613735432608446, 1, 0.4980888594475211], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 22.9}, 0.3]}, 
+             {Hue[0.9542638242078962, 1, 0.7719467890760062], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 23.5}, 0.3]}, 
+             {Hue[0.9820345626253935, 1, 0.7552669589583308], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 24.1}, 0.3]}, 
+             {Hue[0.9236947017726203, 1, 0.8504199878300199], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 24.7}, 0.3]}, 
+             {Hue[0.2243168003493956, 1, 1.2584755906805407`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{29.7, 25.3}, 0.3]}, 
+             {Hue[0.20307878967613302`, 1, 0.43144271956287217`], Opacity[
+              0.4], EdgeForm[None], DiskBox[{29.7, 25.9}, 0.3]}}, {
+             {Hue[0.6661114620422335, 1, 1.0977546106299454`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 16.3}, 0.3]}, 
+             {Hue[0.676748900767216, 1, 0.7744352222038434], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 16.9}, 0.3]}, 
+             {Hue[0.719159942356332, 1, 1.0793672013448834`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 17.5}, 0.3]}, 
+             {Hue[0.5975902514052065, 1, 0.9708804151359524], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 18.1}, 0.3]}, 
+             {Hue[0.6371582314305226, 1, 1.0723681434284642`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 18.7}, 0.3]}, 
+             {Hue[0.16033041751866905`, 1, 1.115346851928583], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 19.3}, 0.3]}, 
+             {Hue[0.7433213260770404, 1, 0.6083243184473198], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 19.9}, 0.3]}, 
+             {Hue[0.5113348812369036, 1, 0.9302505838344596], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 20.5}, 0.3]}, 
+             {Hue[0.5713870303727817, 1, 1.2717201442487998`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 21.1}, 0.3]}, 
+             {Hue[0.6716056732496105, 1, 0.7181622424319424], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 21.7}, 0.3]}, 
+             {Hue[0.9249722921787014, 1, 0.6444122240858473], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 22.3}, 0.3]}, 
+             {Hue[0.02153856878006466, 1, 0.8464012889007825], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 22.9}, 0.3]}, 
+             {Hue[0.9356419997525527, 1, 0.9778276917145937], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 23.5}, 0.3]}, 
+             {Hue[0.6573240943184946, 1, 0.8004283713662043], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 24.1}, 0.3]}, 
+             {Hue[0.0036324986001634585`, 1, 1.1639580570549373`], Opacity[
+              0.4], EdgeForm[None], DiskBox[{30.3, 24.7}, 0.3]}, 
+             {Hue[0.8823748870144128, 1, 1.2574581594047451`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 25.3}, 0.3]}, 
+             {Hue[0.7012053413128001, 1, 0.7133982679846399], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.3, 25.9}, 0.3]}}, {
+             {Hue[0.3481802857650582, 1, 1.2918108344365957`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 16.3}, 0.3]}, 
+             {Hue[0.10995247221505444`, 1, 1.05671752212651], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 16.9}, 0.3]}, 
+             {Hue[0.36398178082941235`, 1, 0.9821359786971978], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 17.5}, 0.3]}, 
+             {Hue[0.7940593693155997, 1, 0.6369021548295205], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 18.1}, 0.3]}, 
+             {Hue[0.09904555017353145, 1, 0.6996567050676897], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 18.7}, 0.3]}, 
+             {Hue[0.9042875477530985, 1, 1.0607568527742015`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 19.3}, 0.3]}, 
+             {Hue[0.7791632293607207, 1, 1.3445873768923664`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 19.9}, 0.3]}, 
+             {Hue[0.9010536017836448, 1, 0.556991957972704], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 20.5}, 0.3]}, 
+             {Hue[0.34887424499560704`, 1, 1.2658040155629644`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{30.9, 21.1}, 0.3]}, 
+             {Hue[0.08856698314494671, 1, 1.3261070065775797`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 21.7}, 0.3]}, 
+             {Hue[0.5015827169112879, 1, 0.6804998209934482], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 22.3}, 0.3]}, 
+             {Hue[0.4233742272683485, 1, 1.2942692030726395`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 22.9}, 0.3]}, 
+             {Hue[0.791402259610422, 1, 1.0815062215058133`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 23.5}, 0.3]}, 
+             {Hue[0.5399427250224522, 1, 0.99273446616263], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 24.1}, 0.3]}, 
+             {Hue[0.7863596881551587, 1, 1.3171495426080249`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 24.7}, 0.3]}, 
+             {Hue[0.7937692796392184, 1, 0.8332019088453056], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 25.3}, 0.3]}, 
+             {Hue[0.3758141716928123, 1, 0.8961688874664916], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{30.9, 25.9}, 0.3]}}, {
+             {Hue[0.25423905776973355`, 1, 1.299774925548153], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 16.3}, 0.3]}, 
+             {Hue[0.12865174900280807`, 1, 1.026641763740225], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 16.9}, 0.3]}, 
+             {Hue[0.06369790699516131, 1, 1.1865190155284786`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 17.5}, 0.3]}, 
+             {Hue[0.14427260757809046`, 1, 1.0708426546348568`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{31.5, 18.1}, 0.3]}, 
+             {Hue[0.4742048490393005, 1, 0.7883745687933698], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 18.7}, 0.3]}, 
+             {Hue[0.962369601635044, 1, 0.4036007010968189], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 19.3}, 0.3]}, 
+             {Hue[0.4351785332446383, 1, 0.4945301455498935], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 19.9}, 0.3]}, 
+             {Hue[0.17560396679031975`, 1, 1.189786772683679], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 20.5}, 0.3]}, 
+             {Hue[0.8747799308202198, 1, 0.7455535517322481], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 21.1}, 0.3]}, 
+             {Hue[0.19845470897912998`, 1, 1.1491932569326364`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{31.5, 21.7}, 0.3]}, 
+             {Hue[0.9921534113052151, 1, 0.6909243559930424], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 22.3}, 0.3]}, 
+             {Hue[0.5669737976745637, 1, 0.9537326780717928], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 22.9}, 0.3]}, 
+             {Hue[0.6016027591386905, 1, 0.7230658865512064], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 23.5}, 0.3]}, 
+             {Hue[0.4928842307091781, 1, 0.7074188527442905], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 24.1}, 0.3]}, 
+             {Hue[0.48597859248924213`, 1, 0.9755190044560859], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 24.7}, 0.3]}, 
+             {Hue[0.8004078825885452, 1, 0.9680677633559297], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 25.3}, 0.3]}, 
+             {Hue[0.45070709542664944`, 1, 1.165350059589449], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{31.5, 25.9}, 0.3]}}, {
+             {Hue[0.7036894789819164, 1, 1.3410884934918506`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 16.3}, 0.3]}, 
+             {Hue[0.7757226793785887, 1, 0.4634014831906904], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 16.9}, 0.3]}, 
+             {Hue[0.03567159679745746, 1, 1.1365474013203523`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 17.5}, 0.3]}, 
+             {Hue[0.28537196174942614`, 1, 1.0696514247979412`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{32.1, 18.1}, 0.3]}, 
+             {Hue[0.9422737124567353, 1, 1.0887304564605227`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 18.7}, 0.3]}, 
+             {Hue[0.771571395063527, 1, 1.04624446762296], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 19.3}, 0.3]}, 
+             {Hue[0.3090487460126867, 1, 1.0381930570672222`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 19.9}, 0.3]}, 
+             {Hue[0.5060160611685334, 1, 0.6335493219310798], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 20.5}, 0.3]}, 
+             {Hue[0.06259652876913302, 1, 1.271534337889772], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 21.1}, 0.3]}, 
+             {Hue[0.07829997429581015, 1, 1.1899404398524833`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 21.7}, 0.3]}, 
+             {Hue[0.5922325121327394, 1, 1.1510371980807879`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 22.3}, 0.3]}, 
+             {Hue[0.563090496010644, 1, 0.9118625572930249], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 22.9}, 0.3]}, 
+             {Hue[0.7011966000077374, 1, 1.1511911488504198`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 23.5}, 0.3]}, 
+             {Hue[0.23466974296594412`, 1, 0.41648714336062087`], Opacity[
+              0.4], EdgeForm[None], DiskBox[{32.1, 24.1}, 0.3]}, 
+             {Hue[0.3797864597016307, 1, 1.0426380021796824`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 24.7}, 0.3]}, 
+             {Hue[0.3847201100935407, 1, 0.9055416454488189], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 25.3}, 0.3]}, 
+             {Hue[0.9547592238643259, 1, 1.393426350230845], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.1, 25.9}, 0.3]}}, {
+             {Hue[0.3087967885942018, 1, 0.674833459220947], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 16.3}, 0.3]}, 
+             {Hue[0.9118775526276053, 1, 1.0956388082312931`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 16.9}, 0.3]}, 
+             {Hue[0.5593933366791912, 1, 1.2526746152059203`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 17.5}, 0.3]}, 
+             {Hue[0.7006477074883426, 1, 1.1108620890882452`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 18.1}, 0.3]}, 
+             {Hue[0.7022668279203603, 1, 0.9491249495627799], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 18.7}, 0.3]}, 
+             {Hue[0.3612503778619278, 1, 0.5266057626302291], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 19.3}, 0.3]}, 
+             {Hue[0.1431136307180878, 1, 0.4452948179607338], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 19.9}, 0.3]}, 
+             {Hue[0.20517419926206903`, 1, 0.6051423143821796], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 20.5}, 0.3]}, 
+             {Hue[0.9113980258669745, 1, 0.4560706840210468], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 21.1}, 0.3]}, 
+             {Hue[0.9741339373084037, 1, 0.45438216448957347`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 21.7}, 0.3]}, 
+             {Hue[0.8417125699191816, 1, 0.9654804630910413], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 22.3}, 0.3]}, 
+             {Hue[0.8224509614579243, 1, 1.1439647408893534`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 22.9}, 0.3]}, 
+             {Hue[0.9596775880031663, 1, 0.8999077562887382], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 23.5}, 0.3]}, 
+             {Hue[0.6693575276722392, 1, 0.658177646532757], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 24.1}, 0.3]}, 
+             {Hue[0.3354854475980711, 1, 1.074620575564043], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 24.7}, 0.3]}, 
+             {Hue[0.9744119809817948, 1, 0.9691073109183724], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{32.7, 25.3}, 0.3]}, 
+             {Hue[0.13529225725074334`, 1, 1.3666367166383115`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{32.7, 25.9}, 0.3]}}, {
+             {Hue[0.05750436293995209, 1, 1.0458179211536818`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 16.3}, 0.3]}, 
+             {Hue[0.08144718096843562, 1, 0.814344150727205], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 16.9}, 0.3]}, 
+             {Hue[0.6162453740668192, 1, 0.7341927370463036], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 17.5}, 0.3]}, 
+             {Hue[0.8684221076844201, 1, 1.1960727672887481`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 18.1}, 0.3]}, 
+             {Hue[0.6638164455928683, 1, 0.7758813457998018], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 18.7}, 0.3]}, 
+             {Hue[0.8792345475850356, 1, 1.2081905214669044`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 19.3}, 0.3]}, 
+             {Hue[0.3717581368715528, 1, 0.8948120662517672], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 19.9}, 0.3]}, 
+             {Hue[0.994887299812103, 1, 1.1370728124956275`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 20.5}, 0.3]}, 
+             {Hue[0.3141424409032265, 1, 1.3971243297758478`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 21.1}, 0.3]}, 
+             {Hue[0.7439988233135495, 1, 0.8728453258664249], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 21.7}, 0.3]}, 
+             {Hue[0.2277805484315012, 1, 0.9745273341440045], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 22.3}, 0.3]}, 
+             {Hue[0.4235995066642235, 1, 1.2357924097525244`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 22.9}, 0.3]}, 
+             {Hue[0.6493771248874332, 1, 0.6790090533706178], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 23.5}, 0.3]}, 
+             {Hue[0.493200443488222, 1, 0.5073342072770769], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 24.1}, 0.3]}, 
+             {Hue[0.10772363161574061`, 1, 0.8851375682620349], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 24.7}, 0.3]}, 
+             {Hue[0.7750909799739281, 1, 1.2085285432880957`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 25.3}, 0.3]}, 
+             {Hue[0.0681858238352322, 1, 1.3891944077695646`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.3, 25.9}, 0.3]}}, {
+             {Hue[0.13309152668171165`, 1, 0.7176492734331562], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 16.3}, 0.3]}, 
+             {Hue[0.5444522220941117, 1, 0.9343463622811427], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 16.9}, 0.3]}, 
+             {Hue[0.8016779024399052, 1, 1.0317270017628828`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 17.5}, 0.3]}, 
+             {Hue[0.3646828750010571, 1, 0.7658323041144913], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 18.1}, 0.3]}, 
+             {Hue[0.4626542531266393, 1, 1.0668482225614375`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 18.7}, 0.3]}, 
+             {Hue[0.0045685509749120445`, 1, 0.5468551403028535], Opacity[
+              0.4], EdgeForm[None], DiskBox[{33.9, 19.3}, 0.3]}, 
+             {Hue[0.07154158208921868, 1, 1.2955277187842738`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 19.9}, 0.3]}, 
+             {Hue[0.8858890117746376, 1, 0.6931457686392452], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 20.5}, 0.3]}, 
+             {Hue[0.5424958890616702, 1, 0.4203231328093088], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 21.1}, 0.3]}, 
+             {Hue[0.6569178526680237, 1, 1.292200414153538], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 21.7}, 0.3]}, 
+             {Hue[0.004019209052786632, 1, 1.0005869082588728`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{33.9, 22.3}, 0.3]}, 
+             {Hue[0.64490354223424, 1, 0.5367277923530375], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 22.9}, 0.3]}, 
+             {Hue[0.5566175616666822, 1, 1.0179457371868565`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 23.5}, 0.3]}, 
+             {Hue[0.6756174558424057, 1, 0.5289232937611571], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 24.1}, 0.3]}, 
+             {Hue[0.9925955690480364, 1, 0.8148268948903034], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 24.7}, 0.3]}, 
+             {Hue[0.6975334232911152, 1, 1.3702097149005255`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 25.3}, 0.3]}, 
+             {Hue[0.4837028808799162, 1, 0.8236402099940717], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{33.9, 25.9}, 0.3]}}, {
+             {Hue[0.012122264321315246`, 1, 1.006136853430526], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 16.3}, 0.3]}, 
+             {Hue[0.2588184039269237, 1, 0.6579144629610537], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 16.9}, 0.3]}, 
+             {Hue[0.2218469414681068, 1, 0.8740330228049168], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 17.5}, 0.3]}, 
+             {Hue[0.8220799029977903, 1, 1.390633538783511], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 18.1}, 0.3]}, 
+             {Hue[0.4497088540878009, 1, 1.0014161261293832`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 18.7}, 0.3]}, 
+             {Hue[0.9452198217009782, 1, 0.8641530777760308], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 19.3}, 0.3]}, 
+             {Hue[0.8676680728633672, 1, 1.0060973094151162`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 19.9}, 0.3]}, 
+             {Hue[0.4643282994893152, 1, 0.8426183001638624], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 20.5}, 0.3]}, 
+             {Hue[0.34764828625771305`, 1, 1.1219061787530875`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{34.5, 21.1}, 0.3]}, 
+             {Hue[0.5760595618666997, 1, 0.5747357581163021], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 21.7}, 0.3]}, 
+             {Hue[0.6273334104811119, 1, 0.7872504412007927], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 22.3}, 0.3]}, 
+             {Hue[0.4329913297494874, 1, 0.6703879356926784], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 22.9}, 0.3]}, 
+             {Hue[0.7398780479959706, 1, 0.7861770561094993], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 23.5}, 0.3]}, 
+             {Hue[0.2632958344337353, 1, 1.3521717413094363`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 24.1}, 0.3]}, 
+             {Hue[0.32928329115750543`, 1, 1.3192172513378688`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{34.5, 24.7}, 0.3]}, 
+             {Hue[0.38113750225153553`, 1, 0.7439221089967863], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 25.3}, 0.3]}, 
+             {Hue[0.4386800067540515, 1, 0.542008829906763], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{34.5, 25.9}, 0.3]}}, {
+             {Hue[0.45120837291659743`, 1, 1.1653097217269006`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{35.1, 16.3}, 0.3]}, 
+             {Hue[0.34862881914434807`, 1, 0.5062179366324043], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 16.9}, 0.3]}, 
+             {Hue[0.8358771566581391, 1, 0.6535322376998381], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 17.5}, 0.3]}, 
+             {Hue[0.00520144208765716, 1, 0.4614832891607986], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 18.1}, 0.3]}, 
+             {Hue[0.30050347768902075`, 1, 0.4993415772321025], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 18.7}, 0.3]}, 
+             {Hue[0.9351908138708065, 1, 1.2838180708106024`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 19.3}, 0.3]}, 
+             {Hue[0.4492405790733063, 1, 1.3654369669123887`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 19.9}, 0.3]}, 
+             {Hue[0.6546183814201381, 1, 0.9270789883349572], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 20.5}, 0.3]}, 
+             {Hue[0.2315041217297258, 1, 0.76821554093872], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 21.1}, 0.3]}, 
+             {Hue[0.6726946832824672, 1, 1.1439959818750496`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 21.7}, 0.3]}, 
+             {Hue[0.07548754816647607, 1, 0.727426901099742], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 22.3}, 0.3]}, 
+             {Hue[0.3403247806220735, 1, 0.8399413223914151], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 22.9}, 0.3]}, 
+             {Hue[0.17193532815793122`, 1, 0.7031755956479825], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 23.5}, 0.3]}, 
+             {Hue[0.07520327205838262, 1, 0.4540322463107659], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 24.1}, 0.3]}, 
+             {Hue[0.5545075512721511, 1, 0.7856897794914798], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 24.7}, 0.3]}, 
+             {Hue[0.8446571675320855, 1, 0.8047252720429002], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 25.3}, 0.3]}, 
+             {Hue[0.5719395554878826, 1, 1.2569923788004722`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.1, 25.9}, 0.3]}}, {
+             {Hue[0.6500956397658093, 1, 0.9444264638767005], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 16.3}, 0.3]}, 
+             {Hue[0.4239527963395564, 1, 1.1905426014847458`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 16.9}, 0.3]}, 
+             {Hue[0.48537848186720955`, 1, 1.001259568320401], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 17.5}, 0.3]}, 
+             {Hue[0.37372276577746333`, 1, 0.8347389621939384], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 18.1}, 0.3]}, 
+             {Hue[0.026476166072875396`, 1, 1.3478545735648946`], Opacity[
+              0.4], EdgeForm[None], DiskBox[{35.7, 18.7}, 0.3]}, 
+             {Hue[0.8964979277367091, 1, 1.1177477549937072`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 19.3}, 0.3]}, 
+             {Hue[0.6866686887364761, 1, 1.2930902925159682`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 19.9}, 0.3]}, 
+             {Hue[0.5656783101136567, 1, 0.9676430301789917], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 20.5}, 0.3]}, 
+             {Hue[0.1842498247757376, 1, 1.1700830358930498`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 21.1}, 0.3]}, 
+             {Hue[0.6977099441674677, 1, 0.8265139682281349], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 21.7}, 0.3]}, 
+             {Hue[0.0019969103678321165`, 1, 0.6238821920126628], Opacity[
+              0.4], EdgeForm[None], DiskBox[{35.7, 22.3}, 0.3]}, 
+             {Hue[0.9264842112108926, 1, 1.1804641453947102`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 22.9}, 0.3]}, 
+             {Hue[0.18116837671843578`, 1, 1.2384201439870752`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{35.7, 23.5}, 0.3]}, 
+             {Hue[0.8612489489090511, 1, 0.9599753089846806], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 24.1}, 0.3]}, 
+             {Hue[0.16630430030888288`, 1, 0.4544732587072712], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 24.7}, 0.3]}, 
+             {Hue[0.574197494736824, 1, 0.7616421834205332], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 25.3}, 0.3]}, 
+             {Hue[0.19449605122396285`, 1, 0.6881601546363797], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{35.7, 25.9}, 0.3]}}, {
+             {Hue[0.7761855849483839, 1, 0.4891276517269595], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 16.3}, 0.3]}, 
+             {Hue[0.9938929026286136, 1, 0.472276849767704], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 16.9}, 0.3]}, 
+             {Hue[0.5789528856906334, 1, 0.8919755125020842], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 17.5}, 0.3]}, 
+             {Hue[0.2956437207219875, 1, 0.6831299651169892], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 18.1}, 0.3]}, 
+             {Hue[0.9916369352296186, 1, 1.3328951372900013`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 18.7}, 0.3]}, 
+             {Hue[0.03426848091320123, 1, 0.7158923287466493], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 19.3}, 0.3]}, 
+             {Hue[0.6083648739405236, 1, 1.1859525558569874`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 19.9}, 0.3]}, 
+             {Hue[0.844219971668599, 1, 1.1283599988125972`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 20.5}, 0.3]}, 
+             {Hue[0.16546869178248813`, 1, 1.3851420454643653`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{36.3, 21.1}, 0.3]}, 
+             {Hue[0.23499229570214508`, 1, 0.6890732794566133], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 21.7}, 0.3]}, 
+             {Hue[0.8221066531817334, 1, 0.7062565206536223], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 22.3}, 0.3]}, 
+             {Hue[0.7786049334380523, 1, 0.5525889099917832], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 22.9}, 0.3]}, 
+             {Hue[0.22306347583571506`, 1, 0.790533762396601], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 23.5}, 0.3]}, 
+             {Hue[0.805837851267688, 1, 0.7807515164098594], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 24.1}, 0.3]}, 
+             {Hue[0.047981445804702094`, 1, 1.319333790493467], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 24.7}, 0.3]}, 
+             {Hue[0.10224438995198493`, 1, 1.2440298970552508`], Opacity[0.4],
+               EdgeForm[None], DiskBox[{36.3, 25.3}, 0.3]}, 
+             {Hue[0.6756451340934904, 1, 1.3701802646640266`], Opacity[0.4], 
+              EdgeForm[None], DiskBox[{36.3, 25.9}, 0.3]}}}, {{
+             {Hue[0.0784198202016908, 1, 1], 
+              RectangleBox[{30.1, 24.2}, {31.6, 25.7},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+                "Round"], JoinForm["Round"], 
+                PolygonBox[{{31.066941869558782`, 24.49951556604879}, {
+                 31.337463956090915`, 24.83873953302184}, {
+                 31.240915741234016`, 25.261744900929365`}, {30.85, 25.45}, {
+                 30.459084258765987`, 25.261744900929365`}, {
+                 30.36253604390909, 24.838739533021844`}, {30.63305813044122, 
+                 24.49951556604879}}]}, {{{0.9063077870366499, 
+                0.42261826174069944`}, {-0.42261826174069944`, 
+                0.9063077870366499}}, Center}]}, 
+             {Hue[0.507558228850528, 1, 1], 
+              RectangleBox[{32.2, 24.2}, {33.7, 25.7},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], CapForm["Round"], JoinForm[
+                "Round"], 
+                PolygonBox[{{33.3, 24.6}, {32.45, 24.95}, {33.45, 25.45}, {
+                 32.95, 24.95}, {32.45, 24.45}, {32.95, 25.45}}]}, {{{
+                0.27563735581699916`, 
+                0.9612616959383189}, {-0.9612616959383189, 
+                0.27563735581699916`}}, Center}]}, 
+             {Hue[0.473727162415998, 1, 1], 
+              RectangleBox[{34.3, 24.2}, {35.8, 25.7},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+                "Round"], JoinForm["Round"], 
+                PolygonBox[{{35.22101007166283, 24.480153689607047`}, {
+                 35.483012701892214`, 24.7}, {35.5424038765061, 
+                 25.036824088833466`}, {35.371393804843265`, 
+                 25.33302222155949}, {35.05, 25.45}, {34.72860619515673, 
+                 25.33302222155949}, {34.557596123493894`, 
+                 25.036824088833466`}, {34.61698729810778, 24.7}, {
+                 34.87898992833716, 
+                 24.480153689607047`}}]}, {{{-0.838670567945424, \
+-0.5446390350150271}, {0.5446390350150271, -0.838670567945424}}, 
+                Center}]}}, {
+             {Hue[0.8752294274813719, 1, 1], 
+              RectangleBox[{30.1, 21.9}, {31.6, 23.4},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                "Round"], JoinForm["Round"], 
+                BezierCurveBox[{{30.950000000000003`, 22.3}, {30.1, 22.65}, {
+                 31.1, 23.15}, {30.6, 22.65}, {30.1, 22.15}, {30.6, 23.15}},
+                 SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+             {Hue[0.32402765685647594`, 1, 1], 
+              RectangleBox[{32.2, 21.9}, {33.7, 23.4},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                "Round"], JoinForm["Round"], 
+                BezierCurveBox[{{33.05, 22.3}, {32.2, 22.65}, {33.2, 23.15}, {
+                 32.7, 22.65}, {32.2, 22.15}, {32.7, 23.15}},
+                 SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+             {Hue[0.5271090257127216, 1, 1], 
+              RectangleBox[{34.3, 21.9}, {35.8, 23.4},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+                "Round"], JoinForm["Round"], 
+                PolygonBox[{{35.3, 22.216987298107778`}, {35.55, 22.65}, {
+                 35.3, 23.08301270189222}, {34.8, 23.08301270189222}, {34.55, 
+                 22.65}, {34.8, 22.216987298107778`}}]}, {{{
+                0.7431448254773942, -0.6691306063588582}, {0.6691306063588582,
+                 0.7431448254773942}}, Center}]}}, {
+             {Hue[0.7500178581537786, 1, 1], 
+              RectangleBox[{30.1, 19.6}, {31.6, 21.1},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                "Round"], JoinForm["Round"], 
+                BezierCurveBox[{{30.950000000000003`, 20.}, {30.1, 20.35}, {
+                 31.1, 20.85}, {30.6, 20.35}, {30.1, 19.85}, {30.6, 20.85}},
+                 SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+             {Hue[0.7739733889835645, 1, 1], 
+              RectangleBox[{32.2, 19.6}, {33.7, 21.1},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                "Round"], JoinForm["Round"], 
+                BezierCurveBox[{{33.05, 20.}, {32.2, 20.35}, {33.2, 20.85}, {
+                 32.7, 20.35}, {32.2, 19.85}, {32.7, 20.85}},
+                 SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+             {Hue[0.04444637216501879, 1, 1], 
+              RectangleBox[{34.3, 19.6}, {35.8, 21.1},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], CapForm["Round"], JoinForm[
+                "Round"], 
+                PolygonBox[{{35.4, 20.}, {34.55, 20.35}, {35.55, 20.85}, {
+                 35.05, 20.35}, {34.55, 19.85}, {35.05, 
+                 20.85}}]}, {{{-0.13917310096006544`, -0.9902680687415704}, {
+                0.9902680687415704, -0.13917310096006544`}}, Center}]}}, {
+             {Hue[0.16122353233053532`, 1, 1], 
+              RectangleBox[{30.1, 17.3}, {31.6, 18.8},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], CapForm[
+                "Round"], JoinForm["Round"], 
+                PolygonBox[{{31.1, 17.61698729810778}, {31.35, 18.05}, {31.1, 
+                 18.48301270189222}, {30.6, 18.48301270189222}, {30.35, 
+                 18.05}, {30.6, 
+                 17.61698729810778}}]}, {{{-0.12186934340514748`, 
+                0.992546151641322}, {-0.992546151641322, \
+-0.12186934340514748`}}, Center}]}, 
+             {Hue[0.9971385385207223, 1, 1], 
+              RectangleBox[{32.2, 17.3}, {33.7, 18.8},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[0.0065], CapForm["Round"], JoinForm[
+                "Round"], 
+                PolygonBox[{{33.3, 17.700000000000003`}, {32.45, 18.05}, {
+                 33.45, 18.55}, {32.95, 18.05}, {32.45, 17.55}, {32.95, 
+                 18.55}}]}, {{{-0.01745240643728351, 
+                0.9998476951563913}, {-0.9998476951563913, \
+-0.01745240643728351}}, Center}]}, 
+             {Hue[0.22194438267648398`, 1, 1], 
+              RectangleBox[{34.3, 17.3}, {35.8, 18.8},
+               RoundingRadius->0.3], GeometricTransformationBox[
+               {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                "Round"], JoinForm["Round"], 
+                BezierCurveBox[{{35.15, 17.700000000000003`}, {34.3, 18.05}, {
+                 35.3, 18.55}, {34.8, 18.05}, {34.3, 17.55}, {34.8, 18.55}},
+                 SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, 
+                Center}]}}}}, 
+          {GrayLevel[0], EdgeForm[None], 
+           RectangleBox[{29.4, 26.1}, {36.6, 26.5}], InsetBox[
+            StyleBox["\<\"1:25pm  1/25/16\"\>",
+             StripOnInput->False,
+             LineColor->GrayLevel[1],
+             FrontFaceColor->GrayLevel[1],
+             BackFaceColor->GrayLevel[1],
+             GraphicsColor->GrayLevel[1],
+             FontFamily->"Courier",
+             FontSize->6.8999999999999995`,
+             FontColor->GrayLevel[1]], {33, 26.27}]}}}}}}, {{{
+      0.7880107536067219, -0.6156614753256583}, {0.6156614753256583, 
+      0.7880107536067219}}, Center}], {{{2.3, 0.}, {0., 2.3}}, Center}], 
+   GeometricTransformationBox[
+    GeometricTransformationBox[GeometricTransformationBox[
+      {GrayLevel[1], EdgeForm[GrayLevel[0]], RectangleBox[{0, 0}, {8, 14},
+        RoundingRadius->0.9], 
+       {GrayLevel[0], Thickness[Medium], LineBox[{{3.3, 13}, {4.7, 13}}], 
+        {GrayLevel[0], PointSize[Large], Opacity[0.5], PointBox[{4, 13.5}], 
+         {PointSize[Small], Opacity[1], PointBox[{4, 13.5}], 
+          {Thickness[Medium], CircleBox[{4, 1}, 0.7], 
+           {RGBColor[
+            0.27564134634261594`, 0.5207913118625067, 0.925955583826731], 
+            RectangleBox[{0.4, 2}, {7.6, 12.5}], {{
+              {Hue[0.3007274691008597, 1, 0.6026051477281463], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 2.3}, 0.3]}, 
+              {Hue[0.8201895782400808, 1, 0.584869515960922], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 2.9}, 0.3]}, 
+              {Hue[0.5173565113784655, 1, 0.8003650781079573], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 3.5}, 0.3]}, 
+              {Hue[0.8442878738041397, 1, 1.0791589997138775`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 4.1}, 0.3]}, 
+              {Hue[0.9062200010030723, 1, 0.6092571702538726], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 4.699999999999999}, 0.3]}, 
+              {Hue[0.8844144417843887, 1, 1.3570116926045057`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 5.3}, 0.3]}, 
+              {Hue[0.4790317552405323, 1, 0.7201924338727695], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.09191741745191084, 1, 1.3730758068723845`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{0.7, 6.5}, 0.3]}, 
+              {Hue[0.02211698522095351, 1, 0.5416038987750346], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 7.1}, 0.3]}, 
+              {Hue[0.1955031097208153, 1, 1.1063866989179103`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 7.699999999999999}, 0.3]}, 
+              {Hue[0.44665341744509823`, 1, 0.9303230390124072], Opacity[0.4],
+                EdgeForm[None], DiskBox[{0.7, 8.3}, 0.3]}, 
+              {Hue[0.23160419582313452`, 1, 1.3835249399635359`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{0.7, 8.899999999999999}, 0.3]}, 
+              {Hue[0.24325171349543884`, 1, 1.1173361952279333`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{0.7, 9.5}, 0.3]}, 
+              {Hue[0.2707803955321322, 1, 0.4327613988289677], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 10.1}, 0.3]}, 
+              {Hue[0.32396475297983085`, 1, 0.7817458579101676], Opacity[0.4],
+                EdgeForm[None], DiskBox[{0.7, 10.7}, 0.3]}, 
+              {Hue[0.6851414964684359, 1, 1.3564434678008035`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 11.3}, 0.3]}, 
+              {Hue[0.4405750223595153, 1, 1.0823268726572381`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{0.7, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.09410280776704627, 1, 0.6166512789483235], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 2.3}, 0.3]}, 
+              {Hue[0.7215077984413405, 1, 1.1513401061499766`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 2.9}, 0.3]}, 
+              {Hue[0.0255309883406738, 1, 1.3244816820246714`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 3.5}, 0.3]}, 
+              {Hue[0.10135458363108163`, 1, 1.049272052530375], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 4.1}, 0.3]}, 
+              {Hue[0.8357850268549163, 1, 1.3515045745849426`], Opacity[0.4], 
+               EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 4.699999999999999}, 0.3]}, 
+              {Hue[0.2378594558772411, 1, 1.0445909633590182`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 5.3}, 0.3]}, 
+              {Hue[0.12127375148750175`, 1, 1.2394140209208913`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.10131695911850191`, 1, 1.3875841708420733`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 6.5}, 0.3]}, 
+              {Hue[0.07433324903796401, 1, 1.2817875823234686`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{1.2999999999999998`, 7.1}, 0.3]}, 
+              {Hue[0.23000957907654396`, 1, 1.1680996609396894`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 7.699999999999999}, 0.3]}, 
+              {Hue[0.9213646240217994, 1, 0.5541859827976082], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 8.3}, 0.3]}, 
+              {Hue[0.3038424018197279, 1, 0.5442296486595085], Opacity[0.4], 
+               EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 8.899999999999999}, 0.3]}, 
+              {Hue[0.9947717089586992, 1, 0.47266865023360116`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{1.2999999999999998`, 9.5}, 0.3]}, 
+              {Hue[0.0003217106746509213, 1, 1.0952517530849804`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 10.1}, 0.3]}, 
+              {Hue[0.2900609359257089, 1, 1.0988421735723946`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 10.7}, 0.3]}, 
+              {Hue[0.3303192943086539, 1, 0.6039369899884429], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.2999999999999998`, 11.3}, 0.3]}, 
+              {Hue[0.28585130950705717`, 1, 0.9492660363408539], Opacity[0.4],
+                EdgeForm[None], 
+               DiskBox[{1.2999999999999998`, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.14036536954097056`, 1, 0.6663961707996725], Opacity[0.4],
+                EdgeForm[None], DiskBox[{1.9, 2.3}, 0.3]}, 
+              {Hue[0.5251806697360464, 1, 1.1877508727600827`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 2.9}, 0.3]}, 
+              {Hue[0.963138885479301, 1, 0.45312354727415693`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 3.5}, 0.3]}, 
+              {Hue[0.5450653606317806, 1, 1.1876668244180482`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 4.1}, 0.3]}, 
+              {Hue[0.6500861669866551, 1, 1.1677866303756854`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 4.699999999999999}, 0.3]}, 
+              {Hue[0.08295024654993921, 1, 0.7797859235640446], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 5.3}, 0.3]}, 
+              {Hue[0.5666403111334375, 1, 0.5328503308186111], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.7025477713303898, 1, 0.8145156310564582], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 6.5}, 0.3]}, 
+              {Hue[0.5683509911503435, 1, 1.0904846950446254`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 7.1}, 0.3]}, 
+              {Hue[0.5837170117395567, 1, 1.2788671930752669`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 7.699999999999999}, 0.3]}, 
+              {Hue[0.9994939765803008, 1, 0.9599621345561872], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 8.3}, 0.3]}, 
+              {Hue[0.796529304416679, 1, 1.3274035723432065`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 8.899999999999999}, 0.3]}, 
+              {Hue[0.35919980143063746`, 1, 0.852591708383657], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 9.5}, 0.3]}, 
+              {Hue[0.07051281969181034, 1, 0.5816814241131129], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 10.1}, 0.3]}, 
+              {Hue[0.8063254098520076, 1, 0.6419360924215362], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 10.7}, 0.3]}, 
+              {Hue[0.49103424727709943`, 1, 1.3563837836200068`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{1.9, 11.3}, 0.3]}, 
+              {Hue[0.8012870131625005, 1, 1.3733889985601642`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{1.9, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.4194403703442082, 1, 0.7735617839737426], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 2.3}, 0.3]}, 
+              {Hue[0.6131623252458436, 1, 0.8232668058509024], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 2.9}, 0.3]}, 
+              {Hue[0.06132765722294109, 1, 0.773058377598813], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 3.5}, 0.3]}, 
+              {Hue[0.6649188606294836, 1, 0.8303116407439531], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 4.1}, 0.3]}, 
+              {Hue[0.7851514748755237, 1, 0.8998396954370843], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 4.699999999999999}, 0.3]}, 
+              {Hue[0.8040309280996236, 1, 0.5228430108685841], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 5.3}, 0.3]}, 
+              {Hue[0.36381493428582656`, 1, 0.7229009230241158], Opacity[0.4],
+                EdgeForm[None], DiskBox[{2.5, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.08462626310569177, 1, 1.0667214874410669`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{2.5, 6.5}, 0.3]}, 
+              {Hue[0.5199001364665341, 1, 1.2836988523389832`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 7.1}, 0.3]}, 
+              {Hue[0.136166737709972, 1, 0.870558551433985], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 7.699999999999999}, 0.3]}, 
+              {Hue[0.14258417013493463`, 1, 0.5990078462928726], Opacity[0.4],
+                EdgeForm[None], DiskBox[{2.5, 8.3}, 0.3]}, 
+              {Hue[0.46481638016965343`, 1, 1.3442948538090072`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{2.5, 8.899999999999999}, 0.3]}, 
+              {Hue[0.38580110013012936`, 1, 0.9694798452731715], Opacity[0.4],
+                EdgeForm[None], DiskBox[{2.5, 9.5}, 0.3]}, 
+              {Hue[0.4977523276284015, 1, 0.793922124715822], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 10.1}, 0.3]}, 
+              {Hue[0.010197686823446572`, 1, 0.7333990997874454], Opacity[
+               0.4], EdgeForm[None], DiskBox[{2.5, 10.7}, 0.3]}, 
+              {Hue[0.3094988094067792, 1, 1.2613105130823223`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{2.5, 11.3}, 0.3]}, 
+              {Hue[0.6108330636481645, 1, 0.46816581049224315`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{2.5, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.582956810985688, 1, 0.5385019915067993], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 2.3}, 0.3]}, 
+              {Hue[0.4341316247646523, 1, 0.7429640707331343], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 2.9}, 0.3]}, 
+              {Hue[0.09387358606567098, 1, 1.1750057984850817`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{3.0999999999999996`, 3.5}, 0.3]}, 
+              {Hue[0.23988716933157272`, 1, 1.0617562206838635`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 4.1}, 0.3]}, 
+              {Hue[0.8010688077404531, 1, 0.6563901220930201], Opacity[0.4], 
+               EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 4.699999999999999}, 0.3]}, 
+              {Hue[0.8636220188108175, 1, 0.7175803448699464], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 5.3}, 0.3]}, 
+              {Hue[0.8617136494151065, 1, 1.3616862474318596`], Opacity[0.4], 
+               EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.9802671663756957, 1, 0.45519124753232243`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{3.0999999999999996`, 6.5}, 0.3]}, 
+              {Hue[0.477375084430923, 1, 1.1735609287380036`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 7.1}, 0.3]}, 
+              {Hue[0.18423655247493098`, 1, 0.740798779968136], Opacity[0.4], 
+               EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 7.699999999999999}, 0.3]}, 
+              {Hue[0.3478146829337143, 1, 1.1503262116342428`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 8.3}, 0.3]}, 
+              {Hue[0.40005114281025245`, 1, 1.3452149126253672`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 8.899999999999999}, 0.3]}, 
+              {Hue[0.06526861648016324, 1, 0.7511981836173577], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 9.5}, 0.3]}, 
+              {Hue[0.8148336553691029, 1, 1.3756391479894212`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 10.1}, 0.3]}, 
+              {Hue[0.7623681787286525, 1, 0.7711772886051994], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.0999999999999996`, 10.7}, 0.3]}, 
+              {Hue[0.43216011491832385`, 1, 1.0604863820566814`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 11.3}, 0.3]}, 
+              {Hue[0.6579252949449994, 1, 0.7610217100211562], Opacity[0.4], 
+               EdgeForm[None], 
+               DiskBox[{3.0999999999999996`, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.7455294770725842, 1, 1.3061252506491905`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 2.3}, 0.3]}, 
+              {Hue[0.8396805211913752, 1, 1.0548111722240097`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 2.9}, 0.3]}, 
+              {Hue[0.6885533726040556, 1, 0.608311237241982], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 3.5}, 0.3]}, 
+              {Hue[0.8217950901013564, 1, 0.8583599735952351], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 4.1}, 0.3]}, 
+              {Hue[0.6894408948239934, 1, 0.7773656487761081], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 4.699999999999999}, 0.3]}, 
+              {Hue[0.1338763277985211, 1, 1.009786229423784], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 5.3}, 0.3]}, 
+              {Hue[0.8368165023048806, 1, 0.5007785674738853], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.22935845533711907`, 1, 0.8890812936620772], Opacity[0.4],
+                EdgeForm[None], DiskBox[{3.7, 6.5}, 0.3]}, 
+              {Hue[0.28426621737151603`, 1, 0.492763961133836], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 7.1}, 0.3]}, 
+              {Hue[0.9427919669955833, 1, 1.3157443532774682`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 7.699999999999999}, 0.3]}, 
+              {Hue[0.39450846907898796`, 1, 0.534115030143285], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 8.3}, 0.3]}, 
+              {Hue[0.8855630869745981, 1, 0.9010377151158727], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 8.899999999999999}, 0.3]}, 
+              {Hue[0.5932523301413315, 1, 0.7512111832364902], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 9.5}, 0.3]}, 
+              {Hue[0.7287662783292552, 1, 1.2311324593379593`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 10.1}, 0.3]}, 
+              {Hue[0.7177857696646368, 1, 0.9930674782266361], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{3.7, 10.7}, 0.3]}, 
+              {Hue[0.17072849728019612`, 1, 0.6473007496647804], Opacity[0.4],
+                EdgeForm[None], DiskBox[{3.7, 11.3}, 0.3]}, 
+              {Hue[0.42628704654095917`, 1, 0.7362717450922774], Opacity[0.4],
+                EdgeForm[None], DiskBox[{3.7, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.9309983540162277, 1, 0.7872543423532058], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 2.3}, 0.3]}, 
+              {Hue[0.20848204371346735`, 1, 1.1735371212592307`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{4.3, 2.9}, 0.3]}, 
+              {Hue[0.9058347466251004, 1, 0.6889064571445159], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 3.5}, 0.3]}, 
+              {Hue[0.7790785178698925, 1, 0.8628038283440763], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 4.1}, 0.3]}, 
+              {Hue[0.6153510651171707, 1, 1.2680138825071623`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 4.699999999999999}, 0.3]}, 
+              {Hue[0.0864422187344045, 1, 1.178605853840844], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 5.3}, 0.3]}, 
+              {Hue[0.8948908611368858, 1, 0.6346916903312713], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.8300555413356392, 1, 0.9615692408004534], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 6.5}, 0.3]}, 
+              {Hue[0.5037387652072582, 1, 0.4246205188584614], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 7.1}, 0.3]}, 
+              {Hue[0.7468659237207447, 1, 1.0166360131037346`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 7.699999999999999}, 0.3]}, 
+              {Hue[0.5368918263770519, 1, 1.0715396461325448`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 8.3}, 0.3]}, 
+              {Hue[0.07806342906822428, 1, 0.6531923293283693], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 8.899999999999999}, 0.3]}, 
+              {Hue[0.7471234327283651, 1, 0.6719764162914249], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 9.5}, 0.3]}, 
+              {Hue[0.47002890371664496`, 1, 0.5257749569658662], Opacity[0.4],
+                EdgeForm[None], DiskBox[{4.3, 10.1}, 0.3]}, 
+              {Hue[0.9283277193923927, 1, 1.3959684617921857`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 10.7}, 0.3]}, 
+              {Hue[0.5107689486467764, 1, 1.3409416765113558`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 11.3}, 0.3]}, 
+              {Hue[0.925459640489352, 1, 0.7790521252748189], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.3, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.5663489794409122, 1, 0.6743402880322354], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 2.3}, 0.3]}, 
+              {Hue[0.8055193734126758, 1, 1.0670990389749266`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 2.9}, 0.3]}, 
+              {Hue[0.3281636601262172, 1, 1.3628635837688035`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 3.5}, 0.3]}, 
+              {Hue[0.8925559635111673, 1, 0.7590911816740794], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 4.1}, 0.3]}, 
+              {Hue[0.35078974720468725`, 1, 1.1802704522367469`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{4.9, 4.699999999999999}, 0.3]}, 
+              {Hue[0.5461075566271016, 1, 1.160561580302355], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 5.3}, 0.3]}, 
+              {Hue[0.9900568874177822, 1, 1.2364161053765828`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.690132021951559, 1, 0.7066956386181636], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 6.5}, 0.3]}, 
+              {Hue[0.9024695301319334, 1, 1.1901020331328809`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 7.1}, 0.3]}, 
+              {Hue[0.2451110506791936, 1, 1.0656128041727384`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 7.699999999999999}, 0.3]}, 
+              {Hue[0.048501606345864534`, 1, 1.1926331174849176`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{4.9, 8.3}, 0.3]}, 
+              {Hue[0.5512656956802415, 1, 0.5924678000260867], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 8.899999999999999}, 0.3]}, 
+              {Hue[0.6611345775489652, 1, 0.66272386236102], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 9.5}, 0.3]}, 
+              {Hue[0.9970367391545145, 1, 0.5065597265957956], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 10.1}, 0.3]}, 
+              {Hue[0.8827913151876381, 1, 1.1463340938816629`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{4.9, 10.7}, 0.3]}, 
+              {Hue[0.35468803317331665`, 1, 0.9971514140428736], Opacity[0.4],
+                EdgeForm[None], DiskBox[{4.9, 11.3}, 0.3]}, 
+              {Hue[0.21410951059854866`, 1, 1.0911313889846173`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{4.9, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.4376949517942348, 1, 0.9981529110188226], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 2.3}, 0.3]}, 
+              {Hue[0.32162852170240996`, 1, 0.6660357369636757], Opacity[0.4],
+                EdgeForm[None], DiskBox[{5.5, 2.9}, 0.3]}, 
+              {Hue[0.6208541808626269, 1, 0.5652133233040199], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 3.5}, 0.3]}, 
+              {Hue[0.10111631828812384`, 1, 1.0581509023083013`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{5.5, 4.1}, 0.3]}, 
+              {Hue[0.05969653911025641, 1, 1.1703425090986115`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{5.5, 4.699999999999999}, 0.3]}, 
+              {Hue[0.15471557002463632`, 1, 0.878744889950604], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 5.3}, 0.3]}, 
+              {Hue[0.1062451412471277, 1, 0.5541824990722325], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.6237767243950476, 1, 0.7352449409909484], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 6.5}, 0.3]}, 
+              {Hue[0.902300230696172, 1, 0.7940988122502849], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 7.1}, 0.3]}, 
+              {Hue[0.058062228723284814`, 1, 1.220972541600088], Opacity[0.4],
+                EdgeForm[None], DiskBox[{5.5, 7.699999999999999}, 0.3]}, 
+              {Hue[0.8174978720616948, 1, 1.0852539355636357`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 8.3}, 0.3]}, 
+              {Hue[0.6792185747512258, 1, 0.6913330446144367], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 8.899999999999999}, 0.3]}, 
+              {Hue[0.33543167739035185`, 1, 1.2670952723591347`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{5.5, 9.5}, 0.3]}, 
+              {Hue[0.33715781447470383`, 1, 1.1298271006868719`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{5.5, 10.1}, 0.3]}, 
+              {Hue[0.7173723284840074, 1, 1.0881468172683921`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 10.7}, 0.3]}, 
+              {Hue[0.9990210462402485, 1, 0.8759300390209847], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{5.5, 11.3}, 0.3]}, 
+              {Hue[0.32232709870494514`, 1, 0.6015738372491098], Opacity[0.4],
+                EdgeForm[None], DiskBox[{5.5, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.5067444569546389, 1, 0.9599107201996954], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 2.3}, 0.3]}, 
+              {Hue[0.7042084148794678, 1, 0.8541027177281265], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 2.9}, 0.3]}, 
+              {Hue[0.3029574905443859, 1, 0.8688731316342108], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 3.5}, 0.3]}, 
+              {Hue[0.24705622298632313`, 1, 0.9024574166509839], Opacity[0.4],
+                EdgeForm[None], DiskBox[{6.1, 4.1}, 0.3]}, 
+              {Hue[0.8871598511695451, 1, 0.7114929541532072], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 4.699999999999999}, 0.3]}, 
+              {Hue[0.14245066479595558`, 1, 0.9329875038613605], Opacity[0.4],
+                EdgeForm[None], DiskBox[{6.1, 5.3}, 0.3]}, 
+              {Hue[0.5949314470134506, 1, 0.8023605297019335], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.15525291822672638`, 1, 1.0679823927640895`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{6.1, 6.5}, 0.3]}, 
+              {Hue[0.36102050857353585`, 1, 0.5953573629871337], Opacity[0.4],
+                EdgeForm[None], DiskBox[{6.1, 7.1}, 0.3]}, 
+              {Hue[0.024865942099857374`, 1, 1.388577943864047], Opacity[0.4],
+                EdgeForm[None], DiskBox[{6.1, 7.699999999999999}, 0.3]}, 
+              {Hue[0.6247052609503094, 1, 1.3918913984270747`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 8.3}, 0.3]}, 
+              {Hue[0.662273262328096, 1, 0.7092117827854184], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 8.899999999999999}, 0.3]}, 
+              {Hue[0.3902365957394571, 1, 1.1886085589026476`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 9.5}, 0.3]}, 
+              {Hue[0.09732985386006265, 1, 1.208070709309505], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 10.1}, 0.3]}, 
+              {Hue[0.5807187567494905, 1, 0.8164563258373142], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 10.7}, 0.3]}, 
+              {Hue[0.054549927111756435`, 1, 0.9742684925533734], Opacity[
+               0.4], EdgeForm[None], DiskBox[{6.1, 11.3}, 0.3]}, 
+              {Hue[0.5481313772092744, 1, 1.1291691249143376`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.1, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.4094885463867377, 1, 0.5938743918116037], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 2.3}, 0.3]}, 
+              {Hue[0.6793747768552083, 1, 0.604666484155156], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 2.9}, 0.3]}, 
+              {Hue[0.30003598302548773`, 1, 0.6121828956197887], Opacity[0.4],
+                EdgeForm[None], DiskBox[{6.7, 3.5}, 0.3]}, 
+              {Hue[0.7037079668077515, 1, 1.0846125678591303`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 4.1}, 0.3]}, 
+              {Hue[0.9371652590035437, 1, 1.165855938855397], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 4.699999999999999}, 0.3]}, 
+              {Hue[0.6734056395961285, 1, 1.0624603457056452`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 5.3}, 0.3]}, 
+              {Hue[0.8215783894212907, 1, 1.3347190638986572`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.6504401392081209, 1, 0.54138960803162], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 6.5}, 0.3]}, 
+              {Hue[0.371824149593736, 1, 1.2554523846242005`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 7.1}, 0.3]}, 
+              {Hue[0.06267470772458128, 1, 0.7362346437948378], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 7.699999999999999}, 0.3]}, 
+              {Hue[0.9446995634100488, 1, 0.713152730160607], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 8.3}, 0.3]}, 
+              {Hue[0.42622783024510147`, 1, 0.8671792927189238], Opacity[0.4],
+                EdgeForm[None], DiskBox[{6.7, 8.899999999999999}, 0.3]}, 
+              {Hue[0.5528124844691746, 1, 1.0828991677686886`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 9.5}, 0.3]}, 
+              {Hue[0.6558915482280707, 1, 0.875981559791957], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 10.1}, 0.3]}, 
+              {Hue[0.8334834478113278, 1, 0.8963654136939913], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 10.7}, 0.3]}, 
+              {Hue[0.9971377157950474, 1, 0.9245006589009493], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{6.7, 11.3}, 0.3]}, 
+              {Hue[0.20578102659811814`, 1, 1.1515132715220378`], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{6.7, 11.899999999999999`}, 0.3]}}, {
+              {Hue[0.3748590544871149, 1, 1.141464282055853], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 2.3}, 0.3]}, 
+              {Hue[0.04281153511218472, 1, 1.2144908003606285`], Opacity[0.4],
+                EdgeForm[None], DiskBox[{7.3, 2.9}, 0.3]}, 
+              {Hue[0.4246893918022028, 1, 0.5866774528231421], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 3.5}, 0.3]}, 
+              {Hue[0.6489313753757717, 1, 1.3899971536541704`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 4.1}, 0.3]}, 
+              {Hue[0.015732019643000195`, 1, 0.7345578057036649], Opacity[
+               0.4], EdgeForm[None], 
+               DiskBox[{7.3, 4.699999999999999}, 0.3]}, 
+              {Hue[0.21781682969835314`, 1, 0.7608860661101756], Opacity[0.4],
+                EdgeForm[None], DiskBox[{7.3, 5.3}, 0.3]}, 
+              {Hue[0.5840928800817482, 1, 1.3464076627279238`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 5.8999999999999995`}, 0.3]}, 
+              {Hue[0.3182642871237926, 1, 0.7809992233847586], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 6.5}, 0.3]}, 
+              {Hue[0.7845289278890437, 1, 1.2596982908169365`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 7.1}, 0.3]}, 
+              {Hue[0.33247931536876396`, 1, 1.061886427982989], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 7.699999999999999}, 0.3]}, 
+              {Hue[0.5000168497817716, 1, 0.4620590012829625], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 8.3}, 0.3]}, 
+              {Hue[0.5357911306879266, 1, 0.7889755419814625], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 8.899999999999999}, 0.3]}, 
+              {Hue[0.46328987774643493`, 1, 0.8430576834139699], Opacity[0.4],
+                EdgeForm[None], DiskBox[{7.3, 9.5}, 0.3]}, 
+              {Hue[0.14876012125989924`, 1, 1.2255002900549488`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{7.3, 10.1}, 0.3]}, 
+              {Hue[0.15092643445021658`, 1, 0.45635978846189695`], Opacity[
+               0.4], EdgeForm[None], DiskBox[{7.3, 10.7}, 0.3]}, 
+              {Hue[0.6021188894044833, 1, 1.206658511658386], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 11.3}, 0.3]}, 
+              {Hue[0.5745592526717285, 1, 1.2902472060580283`], Opacity[0.4], 
+               EdgeForm[None], DiskBox[{7.3, 11.899999999999999`}, 0.3]}}}, {{
+              
+              {Hue[0.5835325765657444, 1, 1], 
+               RectangleBox[{1.1, 10.2}, {2.6, 11.7},
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[0.0065], CapForm["Round"], JoinForm[
+                 "Round"], 
+                 PolygonBox[{{2.2, 10.6}, {1.35, 10.95}, {2.35, 11.45}, {1.85,
+                   10.95}, {1.35, 10.45}, {1.85, 
+                  11.45}}]}, {{{-0.754709580222772, 
+                 0.6560590289905073}, {-0.6560590289905073, \
+-0.754709580222772}}, Center}]}, 
+              {Hue[0.9759488582692482, 1, 1], 
+               RectangleBox[{3.2, 10.2}, {4.7, 11.7},
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[0.0065], Dashing[None], CapForm[
+                 "Round"], JoinForm["Round"], 
+                 PolygonBox[{{4.2, 10.51698729810778}, {4.45, 10.95}, {4.2, 
+                  11.383012701892218`}, {3.7, 11.383012701892218`}, {3.45, 
+                  10.95}, {3.7, 10.51698729810778}}]}, {{{-0.2588190451025207,
+                  0.9659258262890682}, {-0.9659258262890682, \
+-0.2588190451025207}}, Center}]}, 
+              {Hue[0.5476455435726602, 1, 1], 
+               RectangleBox[{5.3, 10.2}, {6.8, 11.7},
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                 "Round"], JoinForm["Round"], 
+                 BezierCurveBox[{{6.15, 10.6}, {5.3, 10.95}, {6.3, 11.45}, {
+                  5.8, 10.95}, {5.3, 10.45}, {5.8, 11.45}},
+                  SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, 
+                 Center}]}}, {
+              {Hue[0.6542894709724274, 1, 1], 
+               RectangleBox[{1.1, 7.9}, {2.6, 9.4},
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], 
+                 CapForm["Round"], JoinForm["Round"], 
+                 PolygonBox[{{2.066941869558779, 8.19951556604879}, {
+                  2.337463956090912, 8.538739533021843}, {2.240915741234015, 
+                  8.961744900929368}, {1.85, 9.15}, {1.4590842587659851`, 
+                  8.961744900929368}, {1.3625360439090883`, 
+                  8.538739533021843}, {1.633058130441221, 
+                  8.199515566048792}}]}, {{{0, -1}, {1, 0}}, Center}]}, 
+              {Hue[0.9795632966391818, 1, 1], 
+               RectangleBox[{3.2, 7.9}, {4.7, 9.4},
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                 "Round"], JoinForm["Round"], 
+                 BezierCurveBox[{{4.050000000000001, 8.3}, {3.2, 8.65}, {4.2, 
+                  9.15}, {3.7, 8.65}, {3.2, 8.15}, {3.7, 9.15}},
+                  SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+              {Hue[0.5362670853075304, 1, 1], 
+               RectangleBox[{5.3, 7.9}, {6.8, 9.4},
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[0.0065], Dashing[{0, Small}], 
+                 CapForm["Round"], JoinForm["Round"], 
+                 PolygonBox[{{6.241341716182545, 8.188060233744357}, {
+                  6.511939766255643, 8.458658283817455}, {6.511939766255643, 
+                  8.841341716182546}, {6.241341716182545, 
+                  9.111939766255643}, {5.858658283817455, 
+                  9.111939766255643}, {5.588060233744357, 
+                  8.841341716182546}, {5.588060233744357, 
+                  8.458658283817455}, {5.858658283817455, 
+                  8.188060233744357}}]}, {{{0.9271838545667874, 
+                 0.374606593415912}, {-0.374606593415912, 
+                 0.9271838545667874}}, Center}]}}, {
+              {Hue[0.8820797633535862, 1, 1], 
+               RectangleBox[{1.1, 5.6000000000000005`}, {2.6, 7.1000000000000005`},
+                
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[Medium], Dashing[None], CapForm[
+                 "Round"], JoinForm["Round"], 
+                 BezierCurveBox[{{1.9500000000000002`, 6.000000000000001}, {
+                  1.1, 6.3500000000000005`}, {2.1, 6.8500000000000005`}, {1.6,
+                   6.3500000000000005`}, {1.1, 5.8500000000000005`}, {1.6, 
+                  6.8500000000000005`}},
+                  SplineClosed->True]}, {{{1.5, 0.}, {0., 1.5}}, Center}]}, 
+              {Hue[0.1127759385435072, 1, 1], 
+               RectangleBox[{3.2, 5.6000000000000005`}, {4.7, 7.1000000000000005`},
+                
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[0.0065], Dashing[None], CapForm[
+                 "Round"], JoinForm["Round"], 
+                 PolygonBox[{{4.303553390593274, 5.996446609406727}, {
+                  4.303553390593274, 6.7035533905932745`}, {
+                  3.5964466094067262`, 6.7035533905932745`}, {
+                  3.5964466094067262`, 5.996446609406727}}]}, {{{
+                 0.9975640502598242, 
+                 0.0697564737441253}, {-0.0697564737441253, 
+                 0.9975640502598242}}, Center}]}, 
+              {Hue[0.8407302716541325, 1, 1], 
+               RectangleBox[{5.3, 5.6000000000000005`}, {6.8, 7.1000000000000005`},
+                
+                RoundingRadius->0.3], GeometricTransformationBox[
+                {GrayLevel[1], Thickness[0.0065], CapForm["Round"], JoinForm[
+                 "Round"], 
+                 PolygonBox[{{6.4, 6.000000000000001}, {5.55, 
+                  6.3500000000000005`}, {6.55, 6.8500000000000005`}, {6.05, 
+                  6.3500000000000005`}, {5.55, 5.8500000000000005`}, {6.05, 
+                  6.8500000000000005`}}]}, {{{-0.9205048534524404, 
+                 0.39073112848927377`}, {-0.39073112848927377`, \
+-0.9205048534524404}}, Center}]}}}}, 
+           {GrayLevel[0], EdgeForm[None], 
+            RectangleBox[{0.4, 12.1}, {7.6, 12.5}], InsetBox[
+             StyleBox["\<\"1:25pm  1/25/16\"\>",
+              StripOnInput->False,
+              LineColor->GrayLevel[1],
+              FrontFaceColor->GrayLevel[1],
+              BackFaceColor->GrayLevel[1],
+              GraphicsColor->GrayLevel[1],
+              FontFamily->"Courier",
+              FontSize->5.699999999999999,
+              FontColor->GrayLevel[1]], {4, 12.27}]}}}}}}, {{{0, -1}, {1, 0}},
+        Center}], {{{1.9, 0.}, {0., 1.9}}, Center}], {28, -12.71}]},
+  ImageSize->Large]], "Output",
+ CellChangeTimes->{
+  3.663085427207974*^9, 3.66308553832097*^9, {3.663085585478429*^9, 
+   3.66308572609678*^9}, {3.6630857622372026`*^9, 3.663085772113183*^9}, {
+   3.663085920713937*^9, 3.663085992701116*^9}, {3.663086051120747*^9, 
+   3.663086255006172*^9}, 3.663327206428073*^9, {3.6633272623349237`*^9, 
+   3.663327283360154*^9}, {3.663336554589528*^9, 3.663336558014842*^9}, 
+   3.6633368800404997`*^9, {3.663337021466421*^9, 3.663337034656493*^9}, {
+   3.6633386938489037`*^9, 3.663338704605833*^9}, {3.6633387615907*^9, 
+   3.663338812612568*^9}, {3.663339379165503*^9, 3.6633393853513193`*^9}, {
+   3.664025620651517*^9, 3.664025625235404*^9}, {3.664831616677003*^9, 
+   3.6648316493102283`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->1.25,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 243, 3, 114, "Title"],
+Cell[CellGroupData[{
+Cell[848, 29, 164, 2, 81, "Chapter"],
+Cell[1015, 33, 308, 7, 164, "Subchapter"],
+Cell[CellGroupData[{
+Cell[1348, 44, 191, 2, 57, "Subchapter"],
+Cell[CellGroupData[{
+Cell[1564, 50, 149, 2, 80, "Section"],
+Cell[1716, 54, 604, 13, 61, "Text"],
+Cell[2323, 69, 972, 16, 109, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3332, 90, 142, 2, 80, "Section"],
+Cell[CellGroupData[{
+Cell[3499, 96, 355, 5, 43, "Subsubsection"],
+Cell[3857, 103, 200, 4, 37, "Text"],
+Cell[4060, 109, 199, 4, 37, "Text"],
+Cell[4262, 115, 174, 4, 37, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4473, 124, 311, 4, 43, "Subsubsection"],
+Cell[4787, 130, 272, 5, 37, "Text"],
+Cell[5062, 137, 238, 3, 37, "Text"],
+Cell[5303, 142, 288, 6, 37, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5628, 153, 278, 3, 43, "Subsubsection"],
+Cell[5909, 158, 405, 7, 61, "Text"],
+Cell[6317, 167, 256, 5, 37, "Text"],
+Cell[6576, 174, 294, 5, 37, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6919, 185, 193, 2, 80, "Section"],
+Cell[7115, 189, 215, 6, 54, "Subsection"],
+Cell[CellGroupData[{
+Cell[7355, 199, 385, 8, 74, "Subsection"],
+Cell[7743, 209, 1275, 27, 417, "Text"],
+Cell[CellGroupData[{
+Cell[9043, 240, 19937, 439, 1275, "Input"],
+Cell[28983, 681, 112135, 1681, 689, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

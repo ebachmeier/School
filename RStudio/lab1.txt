@@ -1,0 +1,4 @@
+summary(HR)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  66.00   69.25   88.00   93.17  110.00  152.00 
+> sd(HR)

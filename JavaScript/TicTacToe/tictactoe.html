@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body > * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+table#tictactoe {
+	border-collapse: collapse;
+}
+
+table#tictactoe td {
+	width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+	padding: 5px;
+    font: bold 36px sans-serif;
+}
+
+td#cell0, td#cell1, td#cell2, td#cell3, td#cell4, td#cell5 {
+    border-bottom: 1px solid;
+}
+
+td#cell0, td#cell1, td#cell3, td#cell4, td#cell6, td#cell7 {
+    border-right: 1px solid;
+}
+</style>
+</head>
+<body>
+<p id="date">
+</p>
+<!--
+For this code, referenced:
+    http://www.w3schools.com/jsref/met_win_settimeout.asp
+    http://dreamerslab.com/blog/en/javascript-callbacks/
+-->
+<script>
+  // using function to avoid adding anything to name space
+  (function () {
+     document.getElementById("date").innerHTML = Date();
+     var myCallBack = function() {
+                 document.getElementById("date").innerHTML = Date();
+                 setTimeout(myCallBack, 1000); 
+     };
+     setTimeout(myCallBack, 1000) })();
+</script>
+<br>
+<table id="tictactoe">
+<tr><td id="cell0"></td><td id="cell1"></td><td id="cell2"></td></tr>
+<tr><td id="cell3"></td><td id="cell4"></td><td id="cell5"></td></tr>
+<tr><td id="cell6"></td><td id="cell7"></td><td id="cell8"></td></tr>
+</table>
+<p id="message">
+Welcome to TicTacToe
+</p>
+<script src="tictactoe3.js"></script>
+</body>
+</html>

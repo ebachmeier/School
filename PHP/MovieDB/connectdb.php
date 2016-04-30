@@ -7,7 +7,7 @@
 <?php
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "cs3319";
+$dbpass = "--------";
 $dbname = "ebachmedb";
 
 $connection = mysqli_connect($dbhost, $dbuser,$dbpass,$dbname);

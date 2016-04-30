@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style>
+		*, *::after, *::before {
+			box-sizing: border-box;
+		}
+		
+		body {
+			background-color: #eee;
+			font-family: Helvetica;
+			text-align: center;
+			transition: background-color 0.6s;
+			font-size: 0.8em;
+		}
+		
+		h1 {
+			font-size: 6em;
+		}
+		
+		.hands {
+			margin: 0 auto;
+			width: 75%;
+		}
+		
+		.user-hand, .computer-hand {
+			display: inline-block;
+			font-size: 18em;
+			width: 50%;
+		}
+		
+		.user-score, .user-name, .computer-score, .computer-name {
+			font-size: 0.3em;
+			margin: 0;
+		}
+		
+		.user-name, .computer-name {
+			font-size: 0.15em;
+			font-weight: bold;
+			margin: 0;
+		}
+		
+		.controls button {
+			background: none;
+			border: 0.05em solid black;
+			border-radius: 0.15em;
+			color: black;
+			font-size: 5em;
+			margin: 0.5em 0.25em 0 0.25em;
+			width: 2em;
+		}
+		
+		.controls button:active {
+			opacity: 0.5;
+		}
+		
+		@-webkit-keyframes bounce {
+		  0%, 20%, 50%, 80%, 100% {
+		    -webkit-transform: translateY(0);
+		    transform: translateY(0);
+		  }
+		  40% {
+		    -webkit-transform: translateY(-30px);
+		    transform: translateY(-30px);
+		  }
+		  60% {
+		    -webkit-transform: translateY(-15px);
+		    transform: translateY(-15px);
+		  }
+		}
+		@keyframes bounce {
+		  0%, 20%, 50%, 80%, 100% {
+		    -moz-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		    -webkit-transform: translateY(0);
+		    transform: translateY(0);
+		  }
+		  40% {
+		    -moz-transform: translateY(-30px);
+		    -ms-transform: translateY(-30px);
+		    -webkit-transform: translateY(-30px);
+		    transform: translateY(-30px);
+		  }
+		  60% {
+		    -moz-transform: translateY(-15px);
+		    -ms-transform: translateY(-15px);
+		    -webkit-transform: translateY(-15px);
+		    transform: translateY(-15px);
+		  }
+		}
+		
+		.bounce {
+			-webkit-animation: bounce 1.5s 3;
+					animation: bounce 1.5s 3;
+		}
+	</style>
+</head>
+<body>
+	<h1>Rock Paper Scissors!</h1>
+	<div class="hands">
+		<div class="user-hand">
+			<p class="user-name">User</p>
+			<p class="user-score">0</p>
+			<i class="fa fa-hand-rock-o"></i>
+		</div><div class="computer-hand">
+			<p class="computer-name">Computer</p>
+			<p class="computer-score">0</p>
+			<i class="fa fa-hand-paper-o"></i>
+		</div>
+	</div>
+	<div class="controls">
+		<button type="button" value="rock"><i class="fa fa-hand-rock-o"></i></button>
+		<button type="button" value="paper"><i class="fa fa-hand-paper-o"></i></button>
+		<button type="button" value="scissors"><i class="fa fa-hand-scissors-o"></i></button>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var name;
+			//loops while the username is empty 
+			do{
+				name = prompt("What's your name?");
+			}while(name == "");
+			
+			$('.user-name').html(name);
+			
+			$('.controls button').on('click', function(){
+				// clear the previous game
+				$('.user-hand, .computer-hand').removeClass('bounce');
+				
+				var userChoice = $(this).attr('value');
+				var computerChoice = makeComputerChoice();
+				// change the hand icons
+				$('.user-hand i').removeAttr('class').addClass('fa fa-hand-' + userChoice + '-o');
+				$('.computer-hand i').removeAttr('class').addClass('fa fa-hand-' + computerChoice + '-o');
+				var winner = comparePlayers(userChoice, computerChoice);
+				if (winner == "User") {
+					// increment user score
+					var oldUserScore = parseInt($('.user-score').html());
+					$('.user-score').html(oldUserScore + 1);
+					// add styles
+					$('.user-hand').addClass('bounce');
+					$('body').css('background-color', '#A7F9AE');
+				} else if (winner == "Computer") {
+					// increment computer score
+					var oldComputerScore = parseInt($('.computer-score').html());
+					$('.computer-score').html(oldComputerScore + 1);
+					// add styles
+					$('.computer-hand').addClass('bounce');
+					$('body').css('background-color', '#F9B7A7');
+				} else {
+					$('body').css('background-color', '#F9F1A7');
+				}
+			});
+		});
+		
+		function makeComputerChoice() {
+			// picks a random number between 1 and 3 (inclusive)
+			var choice = Math.floor((Math.random() * 3) + 1);
+			
+			// returns the computer choice based on the random number
+			if (choice == 1) {
+				return "rock";
+			} else if (choice == 2) {
+				return "paper";
+			} else {
+				return "scissors";
+			}
+		}
+		
+		function comparePlayers(user, computer) {
+			if (user == computer) {
+				return "tie";
+			} else if (user == "rock") {
+				if (computer == "scissors") {
+					return "User";
+				} else {
+					return "Computer";
+				}
+			} else if (user == "paper") {
+				if (computer == "rock") {
+					return "User";
+				} else {
+					return "Computer";
+				}
+			} else {
+				if (computer == "paper") {
+					return "User";
+				} else {
+					return "Computer";
+				}
+			}
+		}
+	</script>
+</body>
+</html>
