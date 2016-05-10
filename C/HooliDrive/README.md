@@ -2,7 +2,7 @@
 A file synchronization client and server system written in C that allows users back up their files from any
 of their devices via the command-line interface.
 
-![Hooli Drive](http://ericbachmeier.me/assets/css/images/hooli.jpg =250x)
+![Hooli Drive](http://ericbachmeier.me/assets/css/images/hoolipreview.jpg)
 
 ## Overview
 Hooli Drive functions on three main programs - the client, a database server, and a file upload server . I built this system to run on a Linux machine. I have, however, tested it on both Mac OS X 10.9 and Ubuntu 14.04.
