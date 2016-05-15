@@ -2,9 +2,9 @@ CC=gcc
 CFLAGS=-Wall -g -c -std=c99
 LFLAGS=-Wall -g
 
-all: ebachme_a1
+all: shell
 
-ebachme_a1: Shell.o StringQueue.o StringArray.o
+shell: Shell.o StringQueue.o StringArray.o
 	$(CC) $(LFLAGS) -o $@ $^
 
 Shell.o: Shell.c
@@ -17,4 +17,4 @@ StringArray.o: StringArray.c StringArray.h
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f *.o ebachme_a1
+	rm -f *.o shell
