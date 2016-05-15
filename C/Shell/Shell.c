@@ -9,7 +9,7 @@
  *
  * To compile and run:
  * 		$ make
- *		$ ./ebachme_a1
+ *		$ ./shell
  *
  * Shell.c is the main file containing the command prompts and input tokenizing methods.
  *
